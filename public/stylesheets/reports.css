@@ -1,0 +1,121 @@
+div#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div#header-left {
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+div#header-right {
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: sans-serif;
+    font-size: 9pt;
+}
+
+h1 {
+    font-size: 15pt;
+}
+
+h2 {
+    font-size: 14pt;
+}
+
+table.list {
+    border-collapse: collapse;
+    background: transparent;
+    -fs-table-paginate: paginate;
+}
+
+table.list th, table.list td {
+    text-align: left;
+    vertical-align: top;
+    padding: .3em;
+}
+
+table.list td.boolean {
+    text-align: center;
+}
+
+table.list td.number {
+    text-align: center;
+}
+
+table.list td.bad {
+    font-weight: bold;
+    background: #faadad !important;
+}
+
+table.list tr td {
+    border-top: 1px solid black;
+}
+
+table.list tr.grouping-header td {
+    background: #ddedf9;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+table.list td.vertically-grouping-number {
+    background: #ddedf9;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.box {
+    border: 2px solid gray;
+    padding: 1em;
+    page-break-inside: avoid;
+}
+
+.top-margin {
+    display: block;
+    margin-top: 1em;
+}
+
+.big-top-margin {
+    page-break-before: always;
+}
+
+.bottom-margin {
+    display: block;
+    margin-top: 1em;
+}
+
+div.page-break {
+    page-break-after: always;
+}
+
+table.signatures {
+    margin-top: 2cm;
+    border-collapse: collapse;
+}
+
+table.signatures td {
+    vertical-align: bottom;
+    width: 5cm;
+    border: 1px solid black;
+    padding: .5cm;
+}
+
+table.signatures div.signature-space {
+    height: 3cm;
+}
+
+table.horizontal-layout td {
+    vertical-align: top;
+    padding: 0;
+}
+
+table.horizontal-layout td.left {
+    padding-right: 2em;
+}

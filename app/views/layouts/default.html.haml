@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+%html
+  %head
+    %title DPC Search
+
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js" 
+    = javascript_include_tag "application.js"
+
+    = stylesheet_link_tag "/stylesheets/style.css"
+    = stylesheet_link_tag "/stylesheets/tabs.css"
+    = stylesheet_link_tag "/stylesheets/forms.css"
+    = stylesheet_link_tag "/stylesheets/lists.css"
+    = stylesheet_link_tag "/stylesheets/messages.css"
+
+  %body
+    #hosted-by-cat
+      %small hosted by
+      = link_to image_tag("catsolutions.png"), "http://www.catsolutions.be", :target => "_blank"
+
+    %h1.title DPC Search
+
+    - if flash[:message]
+      .notice-message= flash[:message]
+
+    = yield

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf8"?>
+<?xml-stylesheet type="text/xsl" href="../../lib/dpcmetaxml2html.xsl"?>
+<dpcMetaData>
+   <metaText lang="NL-BE">
+      <Author/>
+      <TextUnitTitle>Ablynx deelt positieve resultaten mee voor haar Fase 1 studie van ALX-0081, een anti-trombotische
+         Nanobody
+      </TextUnitTitle>
+      <PublishingInfo>
+         <TitlePublication/>
+         <Publisher>Ablynx</Publisher>
+         <ISBN_ISSN/>
+         <datePublication>2007-12-17</datePublication>
+         <originalDatePublication/>
+         <placePublication/>
+         <originalPlacePublication/>
+         <infoPreviousEditions/>
+         <editor/>
+         <articleNumber/>
+         <articlePage/>
+         <keywords/>
+         <articleClass/>
+      </PublishingInfo>
+      <Outcome>written to be read</Outcome>
+      <TextType>External Communication</TextType>
+      <TextSubType>Press releases and newsletters</TextSubType>
+      <Domain>Economy</Domain>
+      <Keywords1>Business</Keywords1>
+      <IPR>short version</IPR>
+      <TypeOfInstitution>profit</TypeOfInstitution>
+      <IntendedAudience>broad external audience</IntendedAudience>
+   </metaText>
+   <metaTrans>
+      <Original lang="EN"/>
+      <Translated>NL</Translated>
+      <Intermediate>not applicable</Intermediate>
+      <Mode>human</Mode>
+   </metaTrans>
+   <stat>
+      <nrWords>341</nrWords>
+      <nrSent/>
+   </stat>
+   <extra>
+      <subdoc/>
+   </extra>
+</dpcMetaData>

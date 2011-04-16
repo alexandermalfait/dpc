@@ -1,0 +1,102 @@
+table.list {
+    border-collapse: collapse;
+    background: white;
+}
+
+table.list th, table.list td {
+    text-align: left;
+    vertical-align: top;
+
+    border: 1px solid #EEE;
+    padding: .3em;
+    font-style: normal;
+}
+
+table.list tr.inactive td {
+    background: #f8b294;
+}
+
+table.list td.boolean {
+    text-align: center;
+}
+
+table.list td.number {
+    text-align: center;
+}
+
+table.list td.money {
+    text-align: right;
+}
+
+table.list tr.total td {
+    font-weight: bold;
+}
+
+
+table.tree-table {
+    empty-cells: show;
+    border: 1px solid #EEE;
+    border-collapse: collapse;
+}
+
+table.tree-table th {
+    border-bottom: 1px solid #EEE;
+    text-align: left;
+    padding: .2em;
+}
+
+table.tree-table td {
+    padding: .2em;
+    border-bottom: 1px solid #EEE;
+    vertical-align: middle;
+}
+
+table.list tr.bad td {
+    background: #f8b294;
+}
+
+table.list tr.neutral td {
+    background: #f3f2d1;
+}
+
+table.list tr.good td {
+    background: #acfbc1;
+}
+
+table.list tr.irrelevant td {
+    background: #CCC;
+}
+
+table.list td.bad {
+    background: #f8b294 !important;
+}
+
+table.list td.orange {
+    background: orange !important;
+}
+
+table.list tr.grouping-header td {
+    background: #ddedf9;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+table.list tr.grouping-header-2 td {
+    background: #dff1f2;
+    font-size: 12px;
+}
+
+table.list td.vertically-grouping-number {
+    background: #ddedf9;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.list td.actions {
+   white-space: nowrap;
+}
+
+table.list td.actions img {
+   margin-right: .5em;
+}

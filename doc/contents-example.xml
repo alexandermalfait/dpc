@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="dpc-aby-002270-nl" xml:lang="nl" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>dpc-aby-002270-nl</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <title>DPC 1.0</title>
+               <date>2010</date>
+            </edition>
+            <respStmt>
+               <resp>Conversion to TEI</resp>
+               <name>Hans Paulussen</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <idno>dpc-aby-002270-nl</idno>
+            <distributor>
+               The Dutch HLT Agency (TST-Centrale – Centrale voor Taal- en Spraaktechnologie)
+            </distributor>
+            <authority>DPC Project</authority>
+            <address>
+               <addName type="ns">http://www.kuleuven-kortrijk.be/dpc</addName>
+            </address>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               DPC – Dutch Parallel Corpus,
+               A Multifunctional and Multilingual corpus
+               (Dutch – English, Dutch – French)
+               STEVIN project STE-05-26
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date>2010-02-25</date>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="s" occurs="33">Used for sentences</tagUsage>
+               <tagUsage gi="w" occurs="947">Used for words/tokens</tagUsage>
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="dpc-aby-002270-nl." xml:lang="nl">
+      <body>
+         <div n="div1">
+            <p n="p1">
+               <seg type="sent" n="seg.p1.s1">
+                  <seg type="original">Ablynx kondigt tweede verlenging aan van haar onderzoeks- en
+                     ontwikkelingssamenwerking naar Nanobody-geneesmiddelen
+                  </seg>
+                  <s n="p1.s1">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="kondigen">kondigt</w>
+                     <w ana="TW(rang,prenom,stan)" lemma="tweede">tweede</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="verlenging">verlenging</w>
+                     <w ana="VZ(fin)" lemma="aan">aan</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" lemma="haar">haar</w>
+                     <w ana="SPEC(afgebr)" lemma="_">onderzoeks-</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ontwikkelingssamenwerking">ontwikkelingssamenwerking
+                     </w>
+                     <w ana="VZ(init)" lemma="naar">naar</w>
+                     <w ana="N(soort,mv,basis)" lemma="nanobody-geneesmiddel">Nanobody-geneesmiddelen</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s2">
+                  <seg type="original">Gent, België, 5 februari 2009 - Ablynx [Euronext Brussels: ABLX], een pionier in
+                     het onderzoek naar en de ontwikkeling van Nanobodies, een nieuwe klasse van therapeutische
+                     proteïnen afgeleid van antilichamen, kondigde vandaag aan dat haar samenwerking met Novartis voor
+                     onderzoek en ontwikkeling naar nieuwe medicijnen met nog een jaar werd verlengd.
+                  </seg>
+                  <s n="p1.s2">
+                     <w ana="N(eigen,ev,basis,onz,stan)" lemma="Gent">Gent</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(eigen,ev,basis,onz,stan)" lemma="België">België</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="TW(hoofd,vrij)" lemma="5">5</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="februari">februari</w>
+                     <w ana="TW(hoofd,vrij)" lemma="2009">2009</w>
+                     <w ana="LET()" lemma="-">-</w>
+                     <w ana="SPEC(vreemd)" lemma="_">Ablynx</w>
+                     <w ana="LET()" lemma="[">[</w>
+                     <w ana="N(eigen,ev,basis,onz,stan)" lemma="Euronext">Euronext</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Brussels</w>
+                     <w ana="LET()" lemma=":">:</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablx">ABLX</w>
+                     <w ana="LET()" lemma="]">]</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="pionier">pionier</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="onderzoek">onderzoek</w>
+                     <w ana="VZ(init)" lemma="naar">naar</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ontwikkeling">ontwikkeling</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Nanobodies">Nanobodies</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="nieuw">nieuwe</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="klasse">klasse</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="therapeutisch">therapeutische</w>
+                     <w ana="N(soort,mv,basis)" lemma="proteïne">proteïnen</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="afleiden">afgeleid</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,mv,basis)" lemma="antilichaam">antilichamen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(pv,verl,ev)" lemma="kondigen">kondigde</w>
+                     <w ana="BW()" lemma="vandaag">vandaag</w>
+                     <w ana="VZ(fin)" lemma="aan">aan</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" lemma="haar">haar</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="samenwerking">samenwerking</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Novartis">Novartis</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="onderzoek">onderzoek</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ontwikkeling">ontwikkeling</w>
+                     <w ana="VZ(init)" lemma="naar">naar</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="nieuw">nieuwe</w>
+                     <w ana="N(soort,mv,basis)" lemma="medicijn">medicijnen</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="BW()" lemma="nog">nog</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="jaar">jaar</w>
+                     <w ana="WW(pv,verl,ev)" lemma="worden">werd</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="verlengen">verlengd</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s3">
+                  <seg type="original">Volgens de bepalingen van de overeenkomst, die in december 2005 werd afgesloten,
+                     werken de bedrijven samen om nieuwe geneesmiddelen, gebaseerd op Nanobodies, te ontdekken en te
+                     ontwikkelen tegen ziektedoelen die moeilijk te behandelen zijn met conventionele antilichamen of
+                     fragmenten daarvan.
+                  </seg>
+                  <s n="p1.s3">
+                     <w ana="VZ(init)" lemma="volgens">Volgens</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,mv,basis)" lemma="bepaling">bepalingen</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="overeenkomst">overeenkomst</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="december">december</w>
+                     <w ana="TW(hoofd,vrij)" lemma="2005">2005</w>
+                     <w ana="WW(pv,verl,ev)" lemma="worden">werd</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="afsluiten">afgesloten</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="werken">werken</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,mv,basis)" lemma="bedrijf">bedrijven</w>
+                     <w ana="BW()" lemma="samen">samen</w>
+                     <w ana="VZ(init)" lemma="om">om</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="nieuw">nieuwe</w>
+                     <w ana="N(soort,mv,basis)" lemma="geneesmiddel">geneesmiddelen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="baseren">gebaseerd</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="N(soort,mv,basis)" lemma="nanobodie">Nanobodies</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="ontdekken">ontdekken</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="ontwikkelen">ontwikkelen</w>
+                     <w ana="VZ(init)" lemma="tegen">tegen</w>
+                     <w ana="N(soort,mv,basis)" lemma="ziektedoel">ziektedoelen</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="moeilijk">moeilijk</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="behandelen">behandelen</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="zijn">zijn</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="conventioneel">conventionele</w>
+                     <w ana="N(soort,mv,basis)" lemma="antilichaam">antilichamen</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,mv,basis)" lemma="fragment">fragmenten</w>
+                     <w ana="BW()" lemma="daarvan">daarvan</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s4">
+                  <seg type="original">Novartis heeft exclusieve rechten om producten, die voortkomen uit deze
+                     samenwerking, verder te ontwikkelen en te commercialiseren.
+                  </seg>
+                  <s n="p1.s4">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Novartis">Novartis</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="hebben">heeft</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="exclusief">exclusieve</w>
+                     <w ana="N(soort,mv,basis)" lemma="recht">rechten</w>
+                     <w ana="VZ(init)" lemma="om">om</w>
+                     <w ana="N(soort,mv,basis)" lemma="product">producten</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="voortkomen">voortkomen</w>
+                     <w ana="VZ(init)" lemma="uit">uit</w>
+                     <w ana="VNW(aanw,det,stan,prenom,met-e,rest)" lemma="deze">deze</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="samenwerking">samenwerking</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="ver">verder</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="ontwikkelen">ontwikkelen</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="commercialiseren">commercialiseren</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s5">
+                  <seg type="original">Deze overeenkomst werd eerder al verlengd in december 2007 en op basis van de
+                     positieve vooruitgang hebben beide bedrijven beslist om de alliantie met nog een jaar te verlengen.
+                  </seg>
+                  <s n="p1.s5">
+                     <w ana="VNW(aanw,det,stan,prenom,met-e,rest)" lemma="deze">Deze</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="overeenkomst">overeenkomst</w>
+                     <w ana="WW(pv,verl,ev)" lemma="worden">werd</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="eerder">eerder</w>
+                     <w ana="BW()" lemma="al">al</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="verlengen">verlengd</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="december">december</w>
+                     <w ana="TW(hoofd,vrij)" lemma="2007">2007</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="basis">basis</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="positief">positieve</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="vooruitgang">vooruitgang</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="hebben">hebben</w>
+                     <w ana="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" lemma="beide">beide</w>
+                     <w ana="N(soort,mv,basis)" lemma="bedrijf">bedrijven</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="beslissen">beslist</w>
+                     <w ana="VZ(init)" lemma="om">om</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="alliantie">alliantie</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="BW()" lemma="nog">nog</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="jaar">jaar</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="verlengen">verlengen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s6">
+                  <seg type="original">Als onderdeel van de overeenkomst ontvangt Ablynx licentievergoedingen en
+                     onderzoeks- en ontwikkelingsgelden.
+                  </seg>
+                  <s n="p1.s6">
+                     <w ana="VZ(init)" lemma="als">Als</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="onderdeel">onderdeel</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="overeenkomst">overeenkomst</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="ontvangen">ontvangt</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="licentievergoedingen">licentievergoedingen</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="SPEC(afgebr)" lemma="_">onderzoeks-</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,mv,basis)" lemma="ontwikkelingsgeld">ontwikkelingsgelden</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s7">
+                  <seg type="original">Bovendien komt Ablynx in aanmerking om mijlpaalinkomsten en royalty's op de
+                     verkoop te ontvangen.
+                  </seg>
+                  <s n="p1.s7">
+                     <w ana="BW()" lemma="bovendien">Bovendien</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="komen">komt</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="aanmerking">aanmerking</w>
+                     <w ana="VZ(init)" lemma="om">om</w>
+                     <w ana="N(soort,mv,basis)" lemma="mijlpaalinkomst">mijlpaalinkomsten</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,mv,basis)" lemma="royalty">royalty's</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="verkoop">verkoop</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="ontvangen">ontvangen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s8">
+                  <seg type="original">Dr Edwin Moses, Gedelegeerd Bestuurder en Voorzitter van Ablynx, verklaarde: "Wij
+                     zijn uiterst tevreden met onze samenwerking met Novartis, één van de belangrijkste farmaceutische
+                     bedrijven ter wereld met aanzienlijke ervaring op gebied van ontwikkeling van innovatieve
+                     geneesmiddelen.
+                  </seg>
+                  <s n="p1.s8">
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="dr">Dr</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Edwin</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Moses</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="delegeren">Gedelegeerd</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="bestuurder">Bestuurder</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="voorzitter">Voorzitter</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(eigen,ev,basis,onz,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(pv,verl,ev)" lemma="verklaren">verklaarde</w>
+                     <w ana="LET()" lemma=":">:</w>
+                     <w ana="LET()" lemma="&quot;">&quot;</w>
+                     <w ana="VNW(pers,pron,nomin,vol,1,mv)" lemma="wij">Wij</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="zijn">zijn</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="uiterst">uiterst</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="tevreden">tevreden</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" lemma="ons">onze</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="samenwerking">samenwerking</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Novartis">Novartis</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="TW(hoofd,prenom,stan)" lemma="één">één</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,sup,met-e,stan)" lemma="belangrijk">belangrijkste</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="farmaceutisch">farmaceutische</w>
+                     <w ana="N(soort,mv,basis)" lemma="bedrijf">bedrijven</w>
+                     <w ana="VZ(versm)" lemma="te">ter</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="wereld">wereld</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="aanzienlijk">aanzienlijke</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ervaring">ervaring</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="gebied">gebied</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ontwikkeling">ontwikkeling</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="innovatief">innovatieve</w>
+                     <w ana="N(soort,mv,basis)" lemma="geneesmiddel">geneesmiddelen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s9">
+                  <seg type="original">We kijken uit naar de voortzetting van onze gezamenlijke inspanningen om de
+                     programma's, gebaseerd op Nanobodies, naar de kliniek te brengen."
+                  </seg>
+                  <s n="p1.s9">
+                     <w ana="VNW(pers,pron,nomin,red,1,mv)" lemma="we">We</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="kijken">kijken</w>
+                     <w ana="VZ(fin)" lemma="uit">uit</w>
+                     <w ana="VZ(init)" lemma="naar">naar</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="voortzetting">voortzetting</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" lemma="ons">onze</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="gezamenlijk">gezamenlijke</w>
+                     <w ana="N(soort,mv,basis)" lemma="inspanning">inspanningen</w>
+                     <w ana="VZ(init)" lemma="om">om</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,mv,basis)" lemma="programma">programma's</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="baseren">gebaseerd</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="N(soort,mv,basis)" lemma="nanobodie">Nanobodies</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="naar">naar</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="kliniek">kliniek</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="brengen">brengen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                     <w ana="LET()" lemma="&quot;">&quot;</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s10">
+                  <seg type="original">Over Ablynx [Euronext Brussels: ABLX] - http://www.ablynx.com</seg>
+                  <s n="p1.s10">
+                     <w ana="VZ(init)" lemma="over">Over</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="LET()" lemma="[">[</w>
+                     <w ana="N(eigen,ev,basis,onz,stan)" lemma="Euronext">Euronext</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Brussels</w>
+                     <w ana="LET()" lemma=":">:</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablx">ABLX</w>
+                     <w ana="LET()" lemma="]">]</w>
+                     <w ana="LET()" lemma="-">-</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="http://www.ablynx.com">http://www.ablynx.com</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s11">
+                  <seg type="original">Ablynx is een biofarmaceutische onderneming die zich toelegt op het onderzoek
+                     naar en de ontwikkeling van Nanobodies, een nieuwe klasse van therapeutische proteïnen, op basis
+                     van fragmenten van enkel-domein antilichamen, voor diverse ernstige en levensbedreigende menselijke
+                     ziekten.
+                  </seg>
+                  <s n="p1.s11">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,tgw,ev)" lemma="zijn">is</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="biofarmaceutisch">biofarmaceutische</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="onderneming">onderneming</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="VNW(refl,pron,obl,red,3,getal)" lemma="zich">zich</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="toeleggen">toelegt</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="onderzoek">onderzoek</w>
+                     <w ana="VZ(init)" lemma="naar">naar</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ontwikkeling">ontwikkeling</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Nanobodies">Nanobodies</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="nieuw">nieuwe</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="klasse">klasse</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="therapeutisch">therapeutische</w>
+                     <w ana="N(soort,mv,basis)" lemma="proteïne">proteïnen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="basis">basis</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,mv,basis)" lemma="fragment">fragmenten</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="enkel-domein">enkel-domein</w>
+                     <w ana="N(soort,mv,basis)" lemma="antilichaam">antilichamen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="divers">diverse</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="ernstig">ernstige</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="levensbedreigend">levensbedreigende</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="menselijk">menselijke</w>
+                     <w ana="N(soort,mv,basis)" lemma="ziekte">ziekten</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s12">
+                  <seg type="original">Ablynx werd opgericht in 2001 in Gent en telt momenteel meer dan 200 werknemers.
+                  </seg>
+                  <s n="p1.s12">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,verl,ev)" lemma="worden">werd</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="oprichten">opgericht</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="TW(hoofd,vrij)" lemma="2001">2001</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="N(eigen,ev,basis,onz,stan)" lemma="Gent">Gent</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="tellen">telt</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="momenteel">momenteel</w>
+                     <w ana="VNW(onbep,grad,stan,vrij,zonder,comp)" lemma="veel">meer</w>
+                     <w ana="VG(onder)" lemma="dan">dan</w>
+                     <w ana="TW(hoofd,prenom,stan)" lemma="200">200</w>
+                     <w ana="N(soort,mv,basis)" lemma="werknemer">werknemers</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s13">
+                  <seg type="original">Ablynx sloot een succesvolle initiële beursintroductie (IPO) af op Euronext
+                     Brussels [ABLX] op 7 november 2007.
+                  </seg>
+                  <s n="p1.s13">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="sloot">sloot</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="succesvol">succesvolle</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="initieel">initiële</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="beursintroductie">beursintroductie</w>
+                     <w ana="LET()" lemma="(">(</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ipo">IPO</w>
+                     <w ana="LET()" lemma=")">)</w>
+                     <w ana="VZ(fin)" lemma="af">af</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="N(eigen,ev,basis,onz,stan)" lemma="Euronext">Euronext</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Brussels</w>
+                     <w ana="LET()" lemma="[">[</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablx">ABLX</w>
+                     <w ana="LET()" lemma="]">]</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="TW(hoofd,vrij)" lemma="7">7</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="november">november</w>
+                     <w ana="TW(hoofd,vrij)" lemma="2007">2007</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s14">
+                  <seg type="original">Ablynx ontwikkelt een portfolio van op Nanobody-gebaseerde therapeutische
+                     programma's voor diverse belangrijke ziektegebieden, met inbegrip van ontstekingen, trombose,
+                     oncologie en de ziekte van Alzheimer.
+                  </seg>
+                  <s n="p1.s14">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="ontwikkelen">ontwikkelt</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,genus,stan)" lemma="portfolio">portfolio</w>
+                     <w ana="VZ(fin)" lemma="van">van</w>
+                     <w ana="VZ(fin)" lemma="op">op</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="Nanobody-gebaseerde">Nanobody-gebaseerde</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="therapeutisch">therapeutische</w>
+                     <w ana="N(soort,mv,basis)" lemma="programma">programma's</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="divers">diverse</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="belangrijk">belangrijke</w>
+                     <w ana="N(soort,mv,basis)" lemma="ziektegebied">ziektegebieden</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="inbegrip">inbegrip</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,mv,basis)" lemma="ontsteking">ontstekingen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="trombose">trombose</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="oncologie">oncologie</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ziekte">ziekte</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Alzheimer">Alzheimer</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s15">
+                  <seg type="original">Nanobodieswerden gegenereerd tegen meer dan 100 verschillende ziektedoelwitten.
+                  </seg>
+                  <s n="p1.s15">
+                     <w ana="N(soort,mv,basis)" lemma="nanobodieswerden">Nanobodieswerden</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="genereren">gegenereerd</w>
+                     <w ana="VZ(init)" lemma="tegen">tegen</w>
+                     <w ana="VNW(onbep,grad,stan,vrij,zonder,comp)" lemma="veel">meer</w>
+                     <w ana="VG(onder)" lemma="dan">dan</w>
+                     <w ana="TW(hoofd,prenom,stan)" lemma="100">100</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="verschillend">verschillende</w>
+                     <w ana="N(soort,mv,basis)" lemma="ziektedoelwit">ziektedoelwitten</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s16">
+                  <seg type="original">Belangrijk is dat Nanobodies, die van nature voorkomen bij lama's, een zeer hoge
+                     homologie hebben met mensen.
+                  </seg>
+                  <s n="p1.s16">
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="belangrijk">Belangrijk</w>
+                     <w ana="WW(pv,tgw,ev)" lemma="zijn">is</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="nanobodies">Nanobodies</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,ev,basis,dat)" lemma="natuur">nature</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="voorkomen">voorkomen</w>
+                     <w ana="VZ(init)" lemma="bij">bij</w>
+                     <w ana="N(soort,mv,basis)" lemma="lama">lama's</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="BW()" lemma="zeer">zeer</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="hoog">hoge</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="homologie">homologie</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="hebben">hebben</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="N(soort,mv,basis)" lemma="mens">mensen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s17">
+                  <seg type="original">Effectiviteitsgegevens werden bekomen in 25 in vivo modellen voor Nanobodiesvoor
+                     een waaier van verschillende doelwitten.
+                  </seg>
+                  <s n="p1.s17">
+                     <w ana="N(soort,mv,basis)" lemma="effectiviteitsgegeven">Effectiviteitsgegevens</w>
+                     <w ana="WW(pv,verl,mv)" lemma="worden">werden</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="bekomen">bekomen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="TW(hoofd,vrij)" lemma="25">25</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="vivo">vivo</w>
+                     <w ana="N(soort,mv,basis)" lemma="model">modellen</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Nanobodiesvoor">Nanobodiesvoor</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="waaier">waaier</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="verschillend">verschillende</w>
+                     <w ana="N(soort,mv,basis)" lemma="doelwit">doelwitten</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s18">
+                  <seg type="original">Ablynx heeft een omvangrijke octrooipositie in het domein van Nanobodiesvoor
+                     toepassingen in de gezondsheidszorg en bezit de exclusieve en wereldwijde rechten op meer dan 50
+                     families van toegekende octrooien en lopende octrooiaanvragen, met inbegrip van de
+                     "Hamers"-octrooien die de basisstructuur, de samenstelling, de aanmaak en het gebruik van
+                     Nanobodiesbeschrijven.
+                  </seg>
+                  <s n="p1.s18">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="hebben">heeft</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="omvangrijk">omvangrijke</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="octrooipositie">octrooipositie</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="domein">domein</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="nanobodiesvoor">Nanobodiesvoor</w>
+                     <w ana="N(soort,mv,basis)" lemma="toepassing">toepassingen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="gezondsheidszorg">gezondsheidszorg</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="bezit">bezit</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="exclusief">exclusieve</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="wereldwijd">wereldwijde</w>
+                     <w ana="N(soort,mv,basis)" lemma="recht">rechten</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" lemma="veel">meer</w>
+                     <w ana="VG(onder)" lemma="dan">dan</w>
+                     <w ana="TW(hoofd,prenom,stan)" lemma="50">50</w>
+                     <w ana="N(soort,mv,basis)" lemma="familie">families</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="WW(vd,prenom,met-e)" lemma="toekennen">toegekende</w>
+                     <w ana="N(soort,mv,basis)" lemma="octrooi">octrooien</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="WW(od,prenom,met-e)" lemma="lopen">lopende</w>
+                     <w ana="N(soort,mv,basis)" lemma="octrooiaanvraag">octrooiaanvragen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="inbegrip">inbegrip</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="LET()" lemma="&quot;">&quot;</w>
+                     <w ana="N(soort,mv,basis)" lemma="hamers&quot;-octrooi">Hamers&quot;-octrooien</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="basisstructuur">basisstructuur</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="samenstelling">samenstelling</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="aanmaak">aanmaak</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="gebruik">gebruik</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="N(soort,mv,basis)" lemma="nanobodiesbeschrijven">Nanobodiesbeschrijven</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s19">
+                  <seg type="original">Ablynx heeft lopende onderzoeksovereenkomsten en belangrijke
+                     samenwerkingsakkoorden met verscheidene grote farmaceutische bedrijven, waaronder Boehringer
+                     Ingelheim, Merck Serono, Novartis en Wyeth Pharmaceuticals.
+                  </seg>
+                  <s n="p1.s19">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="hebben">heeft</w>
+                     <w ana="WW(od,prenom,met-e)" lemma="lopen">lopende</w>
+                     <w ana="N(soort,mv,basis)" lemma="onderzoeksovereenkomst">onderzoeksovereenkomsten</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="belangrijk">belangrijke</w>
+                     <w ana="N(soort,mv,basis)" lemma="samenwerkingsakkoord">samenwerkingsakkoorden</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="verscheiden">verscheidene</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="groot">grote</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="farmaceutisch">farmaceutische</w>
+                     <w ana="N(soort,mv,basis)" lemma="bedrijf">bedrijven</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="BW()" lemma="waaronder">waaronder</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Boehringer">Boehringer</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ingelheim">Ingelheim</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Merck</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Serono</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Novartis">Novartis</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Wyeth</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Pharmaceuticals</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s20">
+                  <seg type="original">Ablynx bouwt een uiteenlopende en brede portfolio van therapeutische
+                     Nanobodiesuit, zowel via deze samenwerkingsovereenkomsten als via haar eigen interne
+                     onderzoeksprogramma's.
+                  </seg>
+                  <s n="p1.s20">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="bouwen">bouwt</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="uiteenlopend">uiteenlopende</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="breed">brede</w>
+                     <w ana="N(soort,mv,basis)" lemma="portfolio">portfolio</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="therapeutisch">therapeutische</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="nanobodiesuit">Nanobodiesuit</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="BW()" lemma="zowel">zowel</w>
+                     <w ana="VZ(init)" lemma="via">via</w>
+                     <w ana="VNW(aanw,det,stan,prenom,met-e,rest)" lemma="deze">deze</w>
+                     <w ana="N(soort,mv,basis)" lemma="samenwerkingsovereenkomst">samenwerkingsovereenkomsten</w>
+                     <w ana="VG(onder)" lemma="als">als</w>
+                     <w ana="VZ(init)" lemma="via">via</w>
+                     <w ana="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" lemma="haar">haar</w>
+                     <w ana="ADJ(prenom,basis,zonder)" lemma="eigen">eigen</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="intern">interne</w>
+                     <w ana="N(soort,mv,basis)" lemma="onderzoeksprogramma">onderzoeksprogramma's</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s21">
+                  <seg type="original">Haar belangrijkste programma, ALX-0081, een nieuw anti-tromboticum dat
+                     intraveneus wordt toegediend, heeft het primaire eindpunt bereikt in een meervoudige dosis Fase Ib
+                     studie in patiënten die een PCI ondergaan.
+                  </seg>
+                  <s n="p1.s21">
+                     <w ana="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" lemma="haar">Haar</w>
+                     <w ana="ADJ(prenom,sup,met-e,stan)" lemma="belangrijk">belangrijkste</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="programma">programma</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="SPEC(symb)" lemma="_">ALX-0081</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,zonder)" lemma="nieuw">nieuw</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="anti-tromboticum">anti-tromboticum</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="intraveneus">intraveneus</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="worden">wordt</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="toedienen">toegediend</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="hebben">heeft</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="primair">primaire</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="eindpunt">eindpunt</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="bereiken">bereikt</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="meervoudig">meervoudige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="dosis">dosis</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="fase">Fase</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ib">Ib</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="studie">studie</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="N(soort,mv,basis)" lemma="patiënt">patiënten</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Pci">PCI</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="ondergaan">ondergaan</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s22">
+                  <seg type="original">Voor ALX-0681, ook een nieuw anti-tromboticum dat subcutaan wordt toegediend, is
+                     een Fase I klinische studie in gezonde vrijwilligers opgestart.
+                  </seg>
+                  <s n="p1.s22">
+                     <w ana="VZ(init)" lemma="voor">Voor</w>
+                     <w ana="SPEC(symb)" lemma="_">ALX-0681</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="BW()" lemma="ook">ook</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,zonder)" lemma="nieuw">nieuw</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="anti-tromboticum">anti-tromboticum</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="subcutaan">subcutaan</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="worden">wordt</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="toedienen">toegediend</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(pv,tgw,ev)" lemma="zijn">is</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="fase">Fase</w>
+                     <w ana="SPEC(symb)" lemma="_">I</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="klinisch">klinische</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="studie">studie</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="gezond">gezonde</w>
+                     <w ana="N(soort,mv,basis)" lemma="vrijwilliger">vrijwilligers</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="opstarten">opgestart</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s23">
+                  <seg type="original">Ablynx heeft ALX-0141, een anti-RANKL Nanobody voor botziekten, naar preklinische
+                     ontwikkeling gebracht.
+                  </seg>
+                  <s n="p1.s23">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="hebben">heeft</w>
+                     <w ana="SPEC(symb)" lemma="_">ALX-0141</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="anti-rankl">anti-RANKL</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Nanobody">Nanobody</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="N(soort,mv,basis)" lemma="botziekte">botziekten</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="naar">naar</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="preklinisch">preklinische</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ontwikkeling">ontwikkeling</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="brengen">gebracht</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s24">
+                  <seg type="original">Bovendien heeft Ablynx' partner Wyeth Pharmaceuticals een Fase I studie opgestart
+                     voor een anti-TNF-alfa Nanobody in december 2008.
+                  </seg>
+                  <s n="p1.s24">
+                     <w ana="BW()" lemma="bovendien">Bovendien</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="hebben">heeft</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Ablynx">Ablynx</w>
+                     <w ana="LET()" lemma="'">'</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="partner">partner</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Wyeth</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Pharmaceuticals</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="fase">Fase</w>
+                     <w ana="SPEC(symb)" lemma="_">I</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="studie">studie</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="opstarten">opgestart</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="anti-tnf-alfa">anti-TNF-alfa</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Nanobody">Nanobody</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="december">december</w>
+                     <w ana="TW(hoofd,vrij)" lemma="2008">2008</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s25">
+                  <seg type="original">Nanobody is een geregistreerde merknaam van Ablynx NV.</seg>
+                  <s n="p1.s25">
+                     <w ana="N(eigen,ev,basis,zijd,stan)" lemma="Nanobody">Nanobody</w>
+                     <w ana="WW(pv,tgw,ev)" lemma="zijn">is</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="WW(vd,prenom,met-e)" lemma="registreren">geregistreerde</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="merknaam">merknaam</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">Ablynx</w>
+                     <w ana="SPEC(deeleigen)" lemma="_">NV.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s26">
+                  <seg type="original">Bepaalde verklaringen, overtuigingen en meningen uitgedrukt in dit document zijn
+                     toekomstgericht en weerspiegelen de huidige verwachtingen en projecties van de Vennootschap of,
+                     naargelang het geval, de bestuurders van de Vennootschap, over toekomstige gebeurtenissen.
+                  </seg>
+                  <s n="p1.s26">
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="bepaald">Bepaalde</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,mv,basis)" lemma="overtuiging">overtuigingen</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,mv,basis)" lemma="mening">meningen</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="uitdrukken">uitgedrukt</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="VNW(aanw,det,stan,prenom,zonder,evon)" lemma="dit">dit</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="document">document</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="zijn">zijn</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="toekomstgericht">toekomstgericht</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="weerspiegelen">weerspiegelen</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="huidig">huidige</w>
+                     <w ana="N(soort,mv,basis)" lemma="verwachting">verwachtingen</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,mv,basis)" lemma="projectie">projecties</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="vennootschap">Vennootschap</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VG(onder)" lemma="naargelang">naargelang</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="geval">geval</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,mv,basis)" lemma="bestuurder">bestuurders</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="vennootschap">Vennootschap</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="over">over</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstig">toekomstige</w>
+                     <w ana="N(soort,mv,basis)" lemma="gebeurtenis">gebeurtenissen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s27">
+                  <seg type="original">Uit hun aard houden toekomstgerichte verklaringen een aantal risico's,
+                     onzekerheden en vooronderstellingen in die ertoe zouden kunnen leiden dat de werkelijke resultaten
+                     of gebeurtenissen wezenlijk verschillen van deze uitgedrukt of gesuggereerd door de
+                     toekomstgerichte verklaringen.
+                  </seg>
+                  <s n="p1.s27">
+                     <w ana="VZ(init)" lemma="uit">Uit</w>
+                     <w ana="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" lemma="hun">hun</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="aard">aard</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="houden">houden</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstgericht">toekomstgerichte</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="aantal">aantal</w>
+                     <w ana="N(soort,mv,basis)" lemma="risico">risico's</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,mv,basis)" lemma="onzekerheid">onzekerheden</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,mv,basis)" lemma="vooronderstelling">vooronderstellingen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="VNW(aanw,det,stan,prenom,zonder,rest)" lemma="die">die</w>
+                     <w ana="BW()" lemma="ertoe">ertoe</w>
+                     <w ana="WW(pv,verl,mv)" lemma="zullen">zouden</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="kunnen">kunnen</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="leiden">leiden</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="werkelijk">werkelijke</w>
+                     <w ana="N(soort,mv,basis)" lemma="resultaat">resultaten</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,mv,basis)" lemma="gebeurtenis">gebeurtenissen</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="wezenlijk">wezenlijk</w>
+                     <w ana="N(soort,mv,basis)" lemma="verschil">verschillen</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(aanw,det,stan,prenom,met-e,rest)" lemma="deze">deze</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="uitdrukken">uitgedrukt</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="suggereren">gesuggereerd</w>
+                     <w ana="VZ(init)" lemma="door">door</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstgericht">toekomstgerichte</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s28">
+                  <seg type="original">Deze risico's, onzekerheden en vooronderstellingen zouden een nadelige invloed
+                     kunnen hebben op de uitkomst en de financiële gevolgen van de plannen en gebeurtenissen die hierin
+                     worden beschreven.
+                  </seg>
+                  <s n="p1.s28">
+                     <w ana="VNW(aanw,det,stan,prenom,met-e,rest)" lemma="deze">Deze</w>
+                     <w ana="N(soort,mv,basis)" lemma="risico">risico's</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,mv,basis)" lemma="onzekerheid">onzekerheden</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,mv,basis)" lemma="vooronderstelling">vooronderstellingen</w>
+                     <w ana="WW(pv,verl,mv)" lemma="zullen">zouden</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="nadelig">nadelige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="invloed">invloed</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="kunnen">kunnen</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="hebben">hebben</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="uitkomst">uitkomst</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="financieel">financiële</w>
+                     <w ana="N(soort,mv,basis)" lemma="gevolg">gevolgen</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,mv,basis)" lemma="plan">plannen</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="N(soort,mv,basis)" lemma="gebeurtenis">gebeurtenissen</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="BW()" lemma="hierin">hierin</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="worden">worden</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="beschrijven">beschreven</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s29">
+                  <seg type="original">Heel wat factoren, met inbegrip van, maar niet beperkt tot, wijzigingen in de
+                     vraag, de concurrentie en de technologie, kunnen tot gevolg hebben dat werkelijke gebeurtenissen,
+                     prestaties of resultaten wezenlijk verschillen van enige geanticipeerde ontwikkeling.
+                  </seg>
+                  <s n="p1.s29">
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="heel">Heel</w>
+                     <w ana="VNW(onbep,pron,stan,vol,3o,ev)" lemma="wat">wat</w>
+                     <w ana="N(soort,mv,basis)" lemma="factoor">factoren</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VZ(init)" lemma="met">met</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="inbegrip">inbegrip</w>
+                     <w ana="VZ(fin)" lemma="van">van</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VG(neven)" lemma="maar">maar</w>
+                     <w ana="BW()" lemma="niet">niet</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="beperken">beperkt</w>
+                     <w ana="VZ(init)" lemma="tot">tot</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,mv,basis)" lemma="wijziging">wijzigingen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="vraag">vraag</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="concurrentie">concurrentie</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="technologie">technologie</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="kunnen">kunnen</w>
+                     <w ana="VZ(init)" lemma="tot">tot</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="gevolg">gevolg</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="hebben">hebben</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="werkelijk">werkelijke</w>
+                     <w ana="N(soort,mv,basis)" lemma="gebeurtenis">gebeurtenissen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,mv,basis)" lemma="prestatie">prestaties</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,mv,basis)" lemma="resultaat">resultaten</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="wezenlijk">wezenlijk</w>
+                     <w ana="N(soort,mv,basis)" lemma="verschil">verschillen</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(onbep,det,stan,prenom,met-e,rest)" lemma="enig">enige</w>
+                     <w ana="WW(vd,prenom,met-e)" lemma="geanticipeerde">geanticipeerde</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="ontwikkeling">ontwikkeling</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s30">
+                  <seg type="original">Toekomstgerichte verklaringen opgenomen in dit document aangaande tendensen of
+                     activiteiten uit het verleden mogen niet worden beschouwd als een verklaring dat dergelijke
+                     tendensen of activiteiten zich zullen voortzetten in de toekomst.
+                  </seg>
+                  <s n="p1.s30">
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="Toekomstgericht">Toekomstgerichte</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="opnemen">opgenomen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="VNW(aanw,det,stan,prenom,zonder,evon)" lemma="dit">dit</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="document">document</w>
+                     <w ana="VZ(init)" lemma="aangaande">aangaande</w>
+                     <w ana="N(soort,mv,basis)" lemma="tendens">tendensen</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,mv,basis)" lemma="activiteit">activiteiten</w>
+                     <w ana="VZ(init)" lemma="uit">uit</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="verleden">verleden</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="mogen">mogen</w>
+                     <w ana="BW()" lemma="niet">niet</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="worden">worden</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="beschouwen">beschouwd</w>
+                     <w ana="VZ(init)" lemma="als">als</w>
+                     <w ana="LID(onbep,stan,agr)" lemma="een">een</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="verklaring">verklaring</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="dergelijk">dergelijke</w>
+                     <w ana="N(soort,mv,basis)" lemma="tendens">tendensen</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,mv,basis)" lemma="activiteit">activiteiten</w>
+                     <w ana="VNW(refl,pron,obl,red,3,getal)" lemma="zich">zich</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="zullen">zullen</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="voortzetten">voortzetten</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="toekomst">toekomst</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s31">
+                  <seg type="original">Bijgevolg verklaart de Vennootschap uitdrukkelijk geen enkele verplichting of
+                     verbintenis op zich te nemen om enige update of herziening van enige toekomstgerichte verklaring
+                     opgenomen in dit document openbaar te maken ten gevolge van enige wijziging in de verwachtingen of
+                     enige wijziging in gebeurtenissen, voorwaarden, vooronderstellingen of omstandigheden waarop de
+                     toekomstgerichte verklaringen zijn gebaseerd.
+                  </seg>
+                  <s n="p1.s31">
+                     <w ana="BW()" lemma="bijgevolg">Bijgevolg</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="verklaren">verklaart</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="vennootschap">Vennootschap</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="uitdrukkelijk">uitdrukkelijk</w>
+                     <w ana="VNW(onbep,det,stan,prenom,zonder,agr)" lemma="geen">geen</w>
+                     <w ana="VNW(onbep,det,stan,prenom,met-e,rest)" lemma="enkel">enkele</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="verplichting">verplichting</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="verbintenis">verbintenis</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="VNW(refl,pron,obl,red,3,getal)" lemma="zich">zich</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="nemen">nemen</w>
+                     <w ana="VZ(init)" lemma="om">om</w>
+                     <w ana="VNW(onbep,det,stan,prenom,met-e,rest)" lemma="enig">enige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="update">update</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="herziening">herziening</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(onbep,det,stan,prenom,met-e,rest)" lemma="enig">enige</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstgericht">toekomstgerichte</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="verklaring">verklaring</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="opnemen">opgenomen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="VNW(aanw,det,stan,prenom,zonder,evon)" lemma="dit">dit</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="document">document</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="openbaar">openbaar</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="maken">maken</w>
+                     <w ana="VZ(versm)" lemma="te">ten</w>
+                     <w ana="N(soort,ev,basis,dat)" lemma="gevolg">gevolge</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(onbep,det,stan,prenom,met-e,rest)" lemma="enig">enige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="wijziging">wijziging</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,mv,basis)" lemma="verwachting">verwachtingen</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="enig">enige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="wijziging">wijziging</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="N(soort,mv,basis)" lemma="gebeurtenis">gebeurtenissen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,mv,basis)" lemma="voorwaarde">voorwaarden</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="N(soort,mv,basis)" lemma="vooronderstelling">vooronderstellingen</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,mv,basis)" lemma="omstandigheid">omstandigheden</w>
+                     <w ana="BW()" lemma="waarop">waarop</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstgericht">toekomstgerichte</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="zijn">zijn</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="baseren">gebaseerd</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s32">
+                  <seg type="original">Noch de Vennootschap, noch haar raadgevers of vertegenwoordigers, noch enige
+                     moeder- of dochteronderneming of enige bedrijfsleider of werknemer daarvan, waarborgen dat de
+                     vooronderstellingen die aan de basis liggen van dergelijke toekomstgerichte verklaringen geen
+                     vergissingen bevatten, en geen van hen aanvaardt enige verantwoordelijkheid voor de toekomstige
+                     juistheid van de toekomstgerichte verklaringen opgenomen in dit document, of voor het zich
+                     daadwerkelijk voordoen van de voorspelde ontwikkelingen.
+                  </seg>
+                  <s n="p1.s32">
+                     <w ana="VG(neven)" lemma="noch">Noch</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="vennootschap">Vennootschap</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VG(neven)" lemma="noch">noch</w>
+                     <w ana="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" lemma="haar">haar</w>
+                     <w ana="N(soort,mv,basis)" lemma="raadgever">raadgevers</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,mv,basis)" lemma="vertegenwoordiger">vertegenwoordigers</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VG(neven)" lemma="noch">noch</w>
+                     <w ana="VNW(onbep,det,stan,prenom,met-e,rest)" lemma="enig">enige</w>
+                     <w ana="SPEC(afgebr)" lemma="_">moeder-</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="dochteronderneming">dochteronderneming</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="enig">enige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="bedrijfsleider">bedrijfsleider</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="werknemer">werknemer</w>
+                     <w ana="BW()" lemma="daarvan">daarvan</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="waarborgen">waarborgen</w>
+                     <w ana="VG(onder)" lemma="dat">dat</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,mv,basis)" lemma="vooronderstelling">vooronderstellingen</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="VZ(init)" lemma="aan">aan</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="basis">basis</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="liggen">liggen</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="dergelijk">dergelijke</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstgericht">toekomstgerichte</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="VNW(onbep,det,stan,prenom,zonder,agr)" lemma="geen">geen</w>
+                     <w ana="N(soort,mv,basis)" lemma="vergissing">vergissingen</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="bevatten">bevatten</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VG(neven)" lemma="en">en</w>
+                     <w ana="VNW(onbep,det,stan,prenom,zonder,agr)" lemma="geen">geen</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(pers,pron,obl,vol,3p,mv)" lemma="hen">hen</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="aanvaarden">aanvaardt</w>
+                     <w ana="VNW(onbep,det,stan,prenom,met-e,rest)" lemma="enig">enige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="verantwoordelijkheid">verantwoordelijkheid</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstig">toekomstige</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="juistheid">juistheid</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstgericht">toekomstgerichte</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="WW(vd,vrij,zonder)" lemma="opnemen">opgenomen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="VNW(aanw,det,stan,prenom,zonder,evon)" lemma="dit">dit</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="document">document</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VG(neven)" lemma="of">of</w>
+                     <w ana="VZ(init)" lemma="voor">voor</w>
+                     <w ana="LID(bep,stan,evon)" lemma="het">het</w>
+                     <w ana="VNW(refl,pron,obl,red,3,getal)" lemma="zich">zich</w>
+                     <w ana="ADJ(vrij,basis,zonder)" lemma="daadwerkelijk">daadwerkelijk</w>
+                     <w ana="WW(pv,tgw,mv)" lemma="voordoen">voordoen</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="LID(bep,stan,rest)" lemma="de">de</w>
+                     <w ana="WW(vd,prenom,met-e)" lemma="voorspellen">voorspelde</w>
+                     <w ana="N(soort,mv,basis)" lemma="ontwikkeling">ontwikkelingen</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+               <seg type="sent" n="seg.p1.s33">
+                  <seg type="original">U dient geen ongepast vertrouwen te stellen in toekomstgerichte verklaringen, die
+                     enkel gelden op datum van dit document.
+                  </seg>
+                  <s n="p1.s33">
+                     <w ana="VNW(pers,pron,nomin,vol,2b,getal)" lemma="u">U</w>
+                     <w ana="WW(pv,tgw,met-t)" lemma="dienen">dient</w>
+                     <w ana="VNW(onbep,det,stan,prenom,zonder,agr)" lemma="geen">geen</w>
+                     <w ana="ADJ(prenom,basis,zonder)" lemma="ongepast">ongepast</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="vertrouwen">vertrouwen</w>
+                     <w ana="VZ(init)" lemma="te">te</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="stellen">stellen</w>
+                     <w ana="VZ(init)" lemma="in">in</w>
+                     <w ana="ADJ(prenom,basis,met-e,stan)" lemma="toekomstgericht">toekomstgerichte</w>
+                     <w ana="N(soort,mv,basis)" lemma="verklaring">verklaringen</w>
+                     <w ana="LET()" lemma=",">,</w>
+                     <w ana="VNW(betr,pron,stan,vol,persoon,getal)" lemma="die">die</w>
+                     <w ana="BW()" lemma="enkel">enkel</w>
+                     <w ana="WW(inf,vrij,zonder)" lemma="gelden">gelden</w>
+                     <w ana="VZ(init)" lemma="op">op</w>
+                     <w ana="N(soort,ev,basis,zijd,stan)" lemma="datum">datum</w>
+                     <w ana="VZ(init)" lemma="van">van</w>
+                     <w ana="VNW(aanw,det,stan,prenom,zonder,evon)" lemma="dit">dit</w>
+                     <w ana="N(soort,ev,basis,onz,stan)" lemma="document">document</w>
+                     <w ana="LET()" lemma=".">.</w>
+                  </s>
+               </seg>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

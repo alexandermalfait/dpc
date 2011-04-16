@@ -1,0 +1,49 @@
+.search-term
+  = hidden_field_tag "#{@field_name}[index]", @index, :class => "index"
+
+  = link_to_function image_tag(Icons.delete), "Search.removeTerm($(this).closest('div.search-term'))", :class => "delete-term"
+
+  %table.form
+    %tr.distance{ :style => ( "display: none" if @index == 0) }
+      %th Afstand
+      %td
+        Maximaal
+        = text_field_tag "#{@field_name}[max_distance]", @search[:max_distance], :size => 3, :class => "distance-field"
+        woorden na laatste match (1 = volgende woord)
+
+    %tr
+      %th Woord
+      %td
+        = text_field_tag "#{@field_name}[word]", @search[:word], :size => 50
+        = check_box_tag "#{@field_name}[word_regex]"
+        Regular Expression
+        (#{link_to "PostgreSQL syntax", "http://www.postgresql.org/docs/8.3/static/functions-matching.html#POSIX-SYNTAX-DETAILS", :target => "_blank"})
+    %tr
+      %th Lemma
+      %td= text_field_tag "#{@field_name}[lemma]", @search[:lemma], :size => 50
+    %tr
+      %th Type(s)
+      %td
+        - Word.word_types.each do |type|
+          = check_box_tag "#{@field_name}[word_types][]", type, false
+          = type
+    %tr
+      %th Flag(s)
+      %td
+        = text_field_tag "#{@field_name}[flags]", @search[:flags]
+        = select_tag "#{@field_name}[flags_type]", options_for_select({ "En" => :AND, "Of" => :OR }, @search[:flags_type])
+        (scheiden met komma)
+    %tr
+      %th Flag(s) uitsluiten
+      %td
+        = text_field_tag "#{@field_name}[exclude_flags]", @search[:exclude_flags]
+        (OF, scheiden met komma)
+    %tr
+      %th Positie in zin
+      %td
+        = select_tag "#{@field_name}[position_type]", options_for_select({ "" => "", "Eerste" => :first, "Laatste" => :last }, @search[:word_type])
+    %tr
+      %th Negatief
+      %td
+        = check_box_tag "#{@field_name}[exclude_term]"
+        Term mag niet voorkomen

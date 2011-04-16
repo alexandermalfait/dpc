@@ -1,0 +1,28 @@
+%h1
+  Zoeken
+
+  = link_to_function image_tag(Icons.add) + " Term toevoegen", "Search.addTerm()"
+
+%form#search
+  #terms
+
+  #extra
+    %table.form
+      %tr
+        %th Context
+        %td
+          = text_field_tag :show_sentences_before, nil, :size => 3, :class => "integer"
+          zinnen voor de match en
+          = text_field_tag :show_sentences_after, nil, :size => 3, :class => "integer"
+          na de match
+      %tr
+        %th Benaming zoekopdracht
+        %td
+          = text_field_tag :search_name, "", :class => "medium"
+
+
+  %button(type="submit")
+    = image_tag(Icons.search)
+    Zoeken
+
+#search-results.top-margin

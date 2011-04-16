@@ -1,0 +1,45 @@
+%h1
+  Zoekresultaat: #{@num_hits} zinnen gevonden
+
+  - if @sentences.present?
+    %span.left-margin
+      = check_box_tag "show_analysis"
+      = label_tag "show_analysis", "Toon ontleding"
+
+    %span.left-margin
+      = link_to_function image_tag(Icons.excel) + " Exporteer naar excel", "Search.exportToExcel()" 
+    
+
+- if @sentences.present?
+  %strong Preview eerste 50 zinnen:
+
+  - @sentences.each do |sentence|
+    - matching_word_indexes = @search_result.get_word_indexes_for_sentence_id(sentence.id)
+
+    .sentence
+      - if @context[:before][sentence]
+        - @context[:before][sentence].each do |context_sentence|
+          .context= context_sentence.original
+
+      .original
+        - sentence.words.each_with_index do |word, index|
+          - if matching_word_indexes.include? index
+            %strong= h word.word
+          - else
+            = h word.word
+
+      .analysis(style="display: none")
+        - sentence.words.each_with_index do |word, index|
+          - if matching_word_indexes.include? index
+            %strong= h word.word
+          - else
+            = h word.word
+            
+          %span.word-analysis
+            #{h word.word_type}(#{h word.flags.join(',')};#{h word.lemma})
+
+      - if @context[:after][sentence]
+        - @context[:after][sentence].each do |context_sentence|
+          .context= context_sentence.original
+- else
+  %strong Niets gevonden :|

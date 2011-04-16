@@ -1,0 +1,48 @@
+div.help-text {
+    border: 1px solid silver;
+    background: #eef3fc;
+    padding: .5em;
+    margin-bottom: 1em;
+    font-style: italic;
+    width: 90%;
+}
+
+div.important-help-text, div.notice-message {
+    border: 2px solid silver;
+    background: #eef3fc;
+    padding: .5em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+div.record-changes {
+    border: 1px solid silver;
+    background: #eef3fc;
+    padding: .5em;
+    margin-top: 2em;
+    font-style: italic;
+    width: 90%;
+}
+
+/* embedded record changes shouldn't have that much top margin */
+div.expandable-form-entry div.record-changes {
+    margin-top: 0;
+}
+
+
+div.error-message {
+    border: 2px solid black;
+    background: #f15757;
+    padding: .5em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 120%;
+    color: white;
+}
+
+img.big-help-icon {
+    position: absolute;
+    right: .5em;
+    bottom: .5em;
+}
