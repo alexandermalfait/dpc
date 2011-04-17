@@ -87,8 +87,8 @@ namespace :dpc do
   end
 
   task :re_run_searches => :environment do
-    excel_filename = 'C:\Users\Alex\Desktop\DPC\alle data BN 25 03 2011.xls'
-    folder = File.dirname(excel_filename)
+    excel_filename = 'C:\Users\Alex\Desktop\DPC\alle data BN 04 04 2011.xls'
+    folder = File.join( File.dirname(excel_filename), "alle data BN 04 04 2011")
 
     workbook = ExcelWorkBook.new(excel_filename)
 
