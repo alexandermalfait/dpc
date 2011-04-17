@@ -13,7 +13,7 @@ class ExcelExporter
     excel.write_row [
       "Benaming","Zoektermen","Zin", "Zin + POS", "File", "Titel", "Taal", "Auteur", "Uitgever", "Publicatie Datum", "Orig Publicatie Datum",
       "Text Type", "Subtype", "Domein", "Keyword", "Type instituut", "Doelpubliek", "Doel", "Brontaal", "Doeltaal", "Intermediate", "Soort Vertaling",
-      "N Woorden", "N Zinnen", "Context Voor", "Context Zin", "Context Na", "Origineel", "Origineel 2"
+      "N Woorden", "N Zinnen", "Context Voor", "Context Zin", "Context Na", "Origineel", "Origineel 2", "Relevantie"
     ], :bold
 
     index = 0
@@ -108,6 +108,8 @@ class ExcelExporter
         row << sentence['untranslated']
         row << sentence['untranslated_2']
 
+        yield row if block_given?
+
         excel.write_row row
       end
     end
@@ -118,7 +120,11 @@ class ExcelExporter
   def get_terms_description
     term_descriptions = []
 
-    @options[:term].values.sort_by { |term| term[:index].to_i }.each do |term_params|
+    terms = @options[:term]
+
+    terms = terms.values if terms.kind_of?(Hash)
+
+    terms.sort_by { |term| term[:index].to_i }.each do |term_params|
       map = {}
 
       map['Woord'] = term_params[:word].downcase if term_params[:word].present?

@@ -62,27 +62,70 @@ namespace :dpc do
     num_imported = 0
 
     Dir[File.join(RAILS_ROOT, "data/*")].each do |folder|
-        if File.directory? folder
-          Dir[File.join(folder, "*-nl-tei.xml")].each do |contents_file|
-            # next unless File.basename(contents_file) == "dpc-bmm-001071-nl-tei.xml"
+      if File.directory? folder
+        Dir[File.join(folder, "*-nl-tei.xml")].each do |contents_file|
+          # next unless File.basename(contents_file) == "dpc-bmm-001071-nl-tei.xml"
 
-            next unless File.size? contents_file # zero bytes file?
+          next unless File.size? contents_file # zero bytes file?
 
-            filename = File.basename(contents_file).sub(/-tei\.xml$/, "")
+          filename = File.basename(contents_file).sub(/-tei\.xml$/, "")
 
-            document = Document.first(:conditions => {:filename => filename})
+          document = Document.first(:conditions => {:filename => filename})
 
-            raise "Could not find document for #{filename}" unless document
+          raise "Could not find document for #{filename}" unless document
 
-            aligner = TranslationAligner.new(document, folder)
+          aligner = TranslationAligner.new(document, folder)
 
-            aligner.align
+          aligner.align
 
-            num_imported += 1
+          num_imported += 1
 
-            puts "Updated #{num_imported}: #{document.filename}"
-          end
+          puts "Updated #{num_imported}: #{document.filename}"
         end
       end
+    end
   end
+
+  task :re_run_searches => :environment do
+    excel_filename = 'C:\Users\Alex\Desktop\DPC\alle data BN 25 03 2011.xls'
+    folder = File.dirname(excel_filename)
+
+    workbook = ExcelWorkBook.new(excel_filename)
+
+    list = workbook.worksheet(0).list_by_header
+
+    list.group_by { |row| row['Zoektermen'] }.each do |search, rows|
+      name = rows.first['Benaming']
+
+      puts "Re-running search #{name}"
+
+      term_params = ::SearchController.parse_search_to_params(search)
+
+      search = SearchController.convert_params_to_search term_params
+
+      search_result = SEARCH_SERVICE.run_search(search)
+
+      exporter = ExcelExporter.new(search_result.sentence_ids, { :search_name => name, :term => term_params })
+
+      excel = exporter.get_excel do |row|
+        if rows.find { |existing_row| row[3] == existing_row['Zin + POS'] }
+          row << "r"
+        end
+      end
+
+      target = File.join(folder, name + ".xls")
+      file_index = 1
+
+      while File.exist?(target)
+        file_index += 1
+
+        target = File.join(folder, "#{name}_#{file_index}.xls")
+      end
+
+      File.open(target, "wb") do |target_file|
+        target_file.write excel.excel_content
+      end
+    end
+  end
+
 end

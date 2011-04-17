@@ -28,7 +28,7 @@ class SearchController < ApplicationController
       end
     end
 
-    search = convert_params_to_search params[:term]
+    search = SearchController.convert_params_to_search params[:term].values
 
     @search_result = SEARCH_SERVICE.run_search(search)
 
@@ -57,7 +57,7 @@ class SearchController < ApplicationController
   end
 
   def excel_export
-    search = convert_params_to_search params[:term]
+    search = SearchController.convert_params_to_search params[:term].values
 
     search_result = SEARCH_SERVICE.run_search(search)
 
@@ -75,10 +75,10 @@ class SearchController < ApplicationController
     )
   end
 
-  def convert_params_to_search(terms)
+  def self.convert_params_to_search(terms)
     search = Search.new
 
-    terms.values.sort_by { |term| term[:index].to_i }.each do |term_params|
+    terms.sort_by { |term| term[:index].to_i }.each do |term_params|
       term = SearchTerm.new
 
       term.word = term_params[:word].downcase if term_params[:word].present?
@@ -114,5 +114,55 @@ class SearchController < ApplicationController
     end
 
     search
+  end
+
+  def self.parse_search_to_params(description)
+    params = []
+
+    terms = description.split(' + ')
+
+    terms.each_with_index do |term_string, term_index|
+      term_param = { :index => term_index }
+
+      parts = term_string.split(' & ')
+
+      parts.each do |part|
+        match = part.match(/(.+)=(.+)/)
+
+        field = match[1]
+        value = match[2]
+
+        raise "Couldn't match #{part}" unless match
+
+        case field
+          when "Woord"
+            term_param[:word] = value
+            term_param[:word_regex] = value.include?("^") || value.include?("$") || value.include?("*") || value.include?("(") || value.include?("|")
+          when "Lemma"
+            term_param[:lemma] = value
+          when "Types"
+            term_param[:word_types] = value.split(',')
+          when "Flags"
+            flags_match = value.match(/(.+)\((.+)\)/)
+
+            term_param[:flags] = flags_match[1]
+            term_param[:flags_type] = flags_match[2]
+          when "FlagsExclude"
+            term_param[:exclude_flags] = value
+          when "Afstand"
+            term_param[:max_distance] = value
+          when "Eerste"
+            term_param[:position_type] = "first"
+          when "Laatste"
+            term_param[:position_type] = "last"
+          when "Negatief"
+            term_param[:exclude_term] = "true"
+        end
+      end
+
+      params << term_param
+    end
+
+    params
   end
 end
