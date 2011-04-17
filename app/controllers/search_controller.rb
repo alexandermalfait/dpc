@@ -63,9 +63,15 @@ class SearchController < ApplicationController
 
     exporter = ExcelExporter.new(search_result.sentence_ids, params)
 
+    if params[:search_name].present?
+      filename = "#{params[:search_name]}.xls"
+    else
+      filename = "export.xls"
+    end
+
     send_data(
       exporter.get_excel.excel_content,
-      :filename => "#{params[:search_name]}.xls", :type => "application/vnd.ms-excel", :disposition => "attachment"
+      :filename => filename, :type => "application/vnd.ms-excel", :disposition => "attachment"
     )
   end
 
