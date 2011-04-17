@@ -63,7 +63,10 @@ class SearchController < ApplicationController
 
     exporter = ExcelExporter.new(search_result.sentence_ids, params)
 
-    send_data exporter.get_excel.excel_content, :filename => "export.xls", :type => "application/vnd.ms-excel", :disposition => "attachment"
+    send_data(
+      exporter.get_excel.excel_content,
+      :filename => "#{params[:search_name]}.xls", :type => "application/vnd.ms-excel", :disposition => "attachment"
+    )
   end
 
   def convert_params_to_search(terms)
