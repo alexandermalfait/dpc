@@ -84,16 +84,17 @@ class SearchController < ApplicationController
       term.word = term_params[:word].downcase if term_params[:word].present?
       term.word_regex = true if term_params[:word_regex].present?
 
-
-      term.lemma = term_params[:lemma].downcase if term_params[:lemma].present?
+      if term_params[:lemma].present?
+        term.lemmas = convert_to_java_array(term_params[:lemma])
+      end
 
       if term_params[:flags].present?
-        term.flags = term_params[:flags].downcase.split(/\s*,\s*/).find_all { |it| it.present? }.to_java(:string)
+        term.flags = convert_to_java_array(term_params[:flags])
         term.flags_or_mode = term_params[:flags_type] == "OR"
       end
 
       if term_params[:exclude_flags].present?
-        term.exclude_flags = term_params[:exclude_flags].downcase.split(/\s*,\s*/).find_all { |it| it.present? }.to_java(:string)
+        term.exclude_flags = convert_to_java_array(term_params[:exclude_flags])
       end
 
       if term_params[:word_types]
@@ -108,12 +109,16 @@ class SearchController < ApplicationController
 
       term.exclude_term = true if term_params[:exclude_term].present?
 
-      logger.info "Term: word = #{term.word}, lemma = #{term.lemma}, flags = #{term.flags.to_a}, types = #{term.word_types.to_a}, distance = #{term.maximum_distance_from_last_match}"
+      logger.info "Term: word = #{term.word}, lemma = #{term.lemmas}, flags = #{term.flags.to_a}, types = #{term.word_types.to_a}, distance = #{term.maximum_distance_from_last_match}"
 
       search.terms << term
     end
 
     search
+  end
+
+  def self.convert_to_java_array(string)
+    string.downcase.split(/\s*,\s*/).find_all { |it| it.present? }.to_java(:string)
   end
 
   def self.parse_search_to_params(description)

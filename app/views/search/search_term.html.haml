@@ -19,8 +19,9 @@
         Regular Expression
         (#{link_to "PostgreSQL syntax", "http://www.postgresql.org/docs/8.3/static/functions-matching.html#POSIX-SYNTAX-DETAILS", :target => "_blank"})
     %tr
-      %th Lemma
-      %td= text_field_tag "#{@field_name}[lemma]", @search[:lemma], :size => 50
+      %th Lemma(s)
+      %td
+        = text_field_tag "#{@field_name}[lemma]", @search[:lemma], :size => 50
     %tr
       %th Type(s)
       %td
@@ -32,12 +33,11 @@
       %td
         = text_field_tag "#{@field_name}[flags]", @search[:flags]
         = select_tag "#{@field_name}[flags_type]", options_for_select({ "En" => :AND, "Of" => :OR }, @search[:flags_type])
-        (scheiden met komma)
     %tr
       %th Flag(s) uitsluiten
       %td
         = text_field_tag "#{@field_name}[exclude_flags]", @search[:exclude_flags]
-        (OF, scheiden met komma)
+        (OF)
     %tr
       %th Positie in zin
       %td
