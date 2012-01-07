@@ -28,6 +28,9 @@
         - Word.word_types.each do |type|
           = check_box_tag "#{@field_name}[word_types][]", type, false
           = type
+
+        = link_to_function "Inverteer", "Search.invertTypes($(this).closest('td'))", :style => "margin-left: 2em;"
+
     %tr
       %th Flag(s)
       %td

@@ -66,6 +66,12 @@ var Search = {
 
     exportToExcel: function() {
         document.location = "/search/excel_export?" + $('form#search').serialize()
+    } ,
+
+    invertTypes: function($container) {
+        $container.find('input[type=checkbox]').each(function() {
+            this.checked = !this.checked
+        })
     }
 
 }
