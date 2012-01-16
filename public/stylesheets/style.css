@@ -187,3 +187,13 @@ span.word-analysis {
     color: gray;
     font-size: 10px;
 }
+
+#current-progress {
+    background: #EEE;
+    padding: 1em;
+    font-size: 14px;
+    font-weight: bold;
+    width: 180px;
+    text-align: center;
+    display: none;
+}

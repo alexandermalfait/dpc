@@ -39,7 +39,37 @@ var Search = {
     search: function() {
         $("#search-results").html('<img src="/images/ajax-loader.gif" />')
 
-        $("#search-results").load("/search/search_preview", $('form#search').serialize())
+        this.startProgressPoll()
+
+        $("#search-results").load("/search/search_preview", $('form#search').serialize(), function() {
+            Search.endProgressPoll()
+        })
+    } ,
+
+    endProgressPoll: function() {
+        window.clearInterval(Search.progressPollingInterval)
+        $("#current-progress").hide()
+
+        document.title = "DPC: Done"
+    } ,
+
+    startProgressPoll:function () {
+        $("#current-progress").show()
+        $("#current-progress").html("Working...")
+
+        Search.progressPollingInterval = window.setInterval(function () {
+            Search.pollProgress()
+        }, 1000)
+    } ,
+
+    pollProgress: function() {
+        $("#current-progress").load("/current_progress.txt")
+
+        document.title = "DPC: " + $("#current-progress").html()
+
+        if($("#current-progress").html() == "Done") {
+            this.endProgressPoll()
+        }
     } ,
 
     addTerm: function() {
@@ -65,7 +95,9 @@ var Search = {
     } ,
 
     exportToExcel: function() {
-        document.location = "/search/excel_export?" + $('form#search').serialize()
+        this.startProgressPoll()
+
+        $("#download-frame").attr('src',"/search/excel_export?" + $('form#search').serialize())
     } ,
 
     invertTypes: function($container) {

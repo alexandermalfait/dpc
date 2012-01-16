@@ -40,6 +40,8 @@ class ExcelExporter
 
         if index % 10 == 0
           puts "Exported to excel: #{index} / #{@sentence_ids.length}"
+
+          report_progress("Excel: #{index}/#{@sentence_ids.length}")
         end
 
         document = documents_by_id[sentence['document_id']][0]
@@ -114,7 +116,15 @@ class ExcelExporter
       end
     end
 
+    report_progress("Done")
+
     excel
+  end
+
+  def report_progress(message)
+    File.open(File.join(Rails.root, "public/current_progress.txt"), "w") do |f|
+      f.write message
+    end
   end
 
   def get_terms_description
