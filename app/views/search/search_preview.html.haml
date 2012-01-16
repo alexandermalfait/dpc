@@ -7,8 +7,10 @@
       = label_tag "show_analysis", "Toon ontleding"
 
     %span.left-margin
-      = link_to_function image_tag(Icons.excel) + " Exporteer naar excel", "Search.exportToExcel()" 
-    
+      - if @num_hits < 65_000
+        = link_to_function image_tag(Icons.excel) + " Exporteer naar excel", "Search.exportToExcel()"
+      - else
+        %strong Te veel zinnen voor export!
 
 - if @sentences.present?
   %strong Preview eerste 50 zinnen:
