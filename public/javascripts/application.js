@@ -63,7 +63,7 @@ var Search = {
     } ,
 
     pollProgress: function() {
-        $("#current-progress").load("/current_progress.txt")
+        $("#current-progress").load("/current_progress.txt?nocache=" + (new Date()).getTime())
 
         document.title = "DPC: " + $("#current-progress").html()
 
