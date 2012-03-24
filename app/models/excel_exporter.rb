@@ -149,7 +149,9 @@ class ExcelExporter
         map['Flags'] = "#{term_params[:flags]}(#{term_params[:flags_type]})"
       end
 
-      map['FlagsExclude'] = term_params[:exclude_flags] if term_params[:exclude_flags].present?
+      if term_params[:exclude_flags].present?
+        map['FlagsExclude'] = "#{term_params[:exclude_flags]}(#{term_params[:exclude_flags_type]})"
+      end
 
       map['Afstand'] = term_params[:max_distance].to_i if term_params[:max_distance].present?
 

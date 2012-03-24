@@ -95,6 +95,7 @@ class SearchController < ApplicationController
 
       if term_params[:exclude_flags].present?
         term.exclude_flags = convert_to_java_array(term_params[:exclude_flags])
+        term.excluded_flags_or_mode = term_params[:exclude_flags_type] == "OR"
       end
 
       if term_params[:word_types]

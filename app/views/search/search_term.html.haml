@@ -35,12 +35,12 @@
       %th Flag(s)
       %td
         = text_field_tag "#{@field_name}[flags]", @search[:flags]
-        = select_tag "#{@field_name}[flags_type]", options_for_select({ "En" => :AND, "Of" => :OR }, @search[:flags_type])
+        = select_tag "#{@field_name}[flags_type]", options_for_select({ "Bevat alle flags (AND)" => :AND, "Bevat één of meer van de flags (OR)" => :OR }, @search[:flags_type])
     %tr
       %th Flag(s) uitsluiten
       %td
         = text_field_tag "#{@field_name}[exclude_flags]", @search[:exclude_flags]
-        (OF)
+        = select_tag "#{@field_name}[exclude_flags_type]", options_for_select({ "Bevat niet alle flags (AND)" => :AND, "Bevat geen van de flags (OR)" => :OR }, @search[:exclude_flags_type])
     %tr
       %th Positie in zin
       %td
