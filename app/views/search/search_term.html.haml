@@ -57,8 +57,8 @@
         = radio_button_tag "#{@field_name}[occurrence_type]", "range"
         %label Range:
 
-        Minimaal
+        %label Minimaal
         = text_field_tag "#{@field_name}[min_occurrences]", "", :size => 3, :class => "occurrence-range"
 
-        Maximaal:
+        %label Maximaal:
         = text_field_tag "#{@field_name}[max_occurrences]", "", :size => 3, :class => "occurrence-range"
