@@ -153,15 +153,6 @@ class ExcelExporter
         map['FlagsExclude'] = "#{term_params[:exclude_flags]}(#{term_params[:exclude_flags_type]})"
       end
 
-      map['Aantal'] = case term_params[:occurrence_type]
-        when "once"
-          "1"
-        when "wildcard"
-          "*"
-        when "range"
-          "#{term_params[:min_occurrences]} - #{term_params[:max_occurrences].to_i}"
-      end
-
       map['Invers'] = "Ja" if term_params[:invert_term].present?
 
 
@@ -171,8 +162,18 @@ class ExcelExporter
         description << "#{key}=#{value}"
       end
 
-      term_descriptions << description.join(" & ")
+      occurence = case term_params[:occurrence_type]
+        when "once"
+          "1"
+        when "wildcard"
+          "*"
+        when "range"
+          "#{term_params[:min_occurrences]} - #{term_params[:max_occurrences].to_i}"
+      end
+
+      term_descriptions << ( "#{description.join(" & ")} (#{occurence})" ).strip
     end
+
 
     term_descriptions.join(" + ")
   end
