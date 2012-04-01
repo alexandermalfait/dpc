@@ -170,8 +170,20 @@ div.search-term, div#extra {
     width: 900px;
 }
 
+div.search-term * {
+    font-size: 12px;
+}
+
 div.search-term a.delete-term {
     float: right;
+}
+
+div.search-term table.form td {
+    padding-bottom: .7em;
+}
+
+div.wildcard-term {
+    background: #e7ffe3;
 }
 
 div.sentence {
@@ -195,5 +207,9 @@ span.word-analysis {
     font-weight: bold;
     width: 180px;
     text-align: center;
+    display: none;
+}
+
+.search-term tr.word-filter, .search-term tr.lemma-filter, .search-term tr.flag-filter, .search-term tr.type-filter {
     display: none;
 }

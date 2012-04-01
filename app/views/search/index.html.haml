@@ -1,7 +1,9 @@
 %h1
   Zoeken
 
-  = link_to_function image_tag(Icons.add) + " Term toevoegen", "Search.addTerm()"
+  = link_to_function image_tag(Icons.add) + " Term toevoegen", "Search.addTerm(false)"
+
+  = link_to_function image_tag(Icons.add) + " Wildcard toevoegen", "Search.addTerm(true)"
 
 %form#search
   #terms

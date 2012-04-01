@@ -102,15 +102,21 @@ class SearchController < ApplicationController
         term.word_types = term_params[:word_types].to_java(:string) 
       end
 
-      term.maximum_distance_from_last_match = term_params[:max_distance].to_i if term_params[:max_distance].present?
+      case term_params[:occurrence_type]
+        when "once"
+          term.min_occurrences = 1
+          term.max_occurrences = 1
+        when "wildcard"
+          term.min_occurrences = 0
+          term.max_occurrences = nil
+        when "range"
+          term.min_occurrences = term_params[:min_occurrences].to_i
+          term.max_occurrences = term_params[:max_occurrences].to_i
+      end
 
-      term.first_in_sentence = term_params[:position_type] == "first"
+      term.invert_term = true if term_params[:invert_term].present?
 
-      term.last_in_sentence = term_params[:position_type] == "last"
-
-      term.exclude_term = true if term_params[:exclude_term].present?
-
-      logger.info "Term: word = #{term.word}, lemma = #{term.lemmas}, flags = #{term.flags.to_a}, types = #{term.word_types.to_a}, distance = #{term.maximum_distance_from_last_match}"
+      logger.info "Term: word = #{term.word}, lemma = #{term.lemmas}, flags = #{term.flags.to_a}, types = #{term.word_types.to_a}"
 
       search.terms << term
     end

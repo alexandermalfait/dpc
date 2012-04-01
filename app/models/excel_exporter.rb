@@ -153,13 +153,16 @@ class ExcelExporter
         map['FlagsExclude'] = "#{term_params[:exclude_flags]}(#{term_params[:exclude_flags_type]})"
       end
 
-      map['Afstand'] = term_params[:max_distance].to_i if term_params[:max_distance].present?
+      map['Aantal'] = case term_params[:occurrence_type]
+        when "once"
+          "1"
+        when "wildcard"
+          "*"
+        when "range"
+          "#{term_params[:min_occurrences]} - #{term_params[:max_occurrences].to_i}"
+      end
 
-      map['Eerste'] = "Ja" if term_params[:position_type] == "first"
-
-      map['Laatste'] = "Ja" if term_params[:position_type] == "last"
-
-      map['Negatief'] = "Ja" if term_params[:exclude_term].present?
+      map['Invers'] = "Ja" if term_params[:invert_term].present?
 
 
       description = []

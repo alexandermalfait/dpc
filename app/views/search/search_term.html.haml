@@ -1,52 +1,64 @@
-.search-term
+.search-term{ :class => ( "wildcard-term" if params[:wildcard] == "true" ) }
   = hidden_field_tag "#{@field_name}[index]", @index, :class => "index"
 
   = link_to_function image_tag(Icons.delete), "Search.removeTerm($(this).closest('div.search-term'))", :class => "delete-term"
 
   %table.form
-    %tr.distance{ :style => ( "display: none" if @index == 0) }
-      %th Afstand
-      %td
-        Maximaal
-        = text_field_tag "#{@field_name}[max_distance]", @search[:max_distance], :size => 3, :class => "distance-field"
-        woorden na laatste match (1 = volgende woord)
-
     %tr
+      %th Filters
+      %td
+        - { "word" => "Woord", "lemma" => "Lemma", "type" => "Type(s)", "flag" => "Flag(s)" }.each do |filter_type, label|
+          %input.filter-selection{ :type => "checkbox", :value => filter_type }
+          %label= label
+    %tr.word-filter
       %th Woord
       %td
         = text_field_tag "#{@field_name}[word]", @search[:word], :size => 50
         = check_box_tag "#{@field_name}[word_regex]"
         Regular Expression
         (#{link_to "PostgreSQL syntax", "http://www.postgresql.org/docs/8.3/static/functions-matching.html#POSIX-SYNTAX-DETAILS", :target => "_blank"})
-    %tr
+    %tr.lemma-filter
       %th Lemma(s)
       %td
         = text_field_tag "#{@field_name}[lemma]", @search[:lemma], :size => 50
-    %tr
+    %tr.type-filter
       %th Type(s)
       %td
         - Word.word_types.each do |type|
           = check_box_tag "#{@field_name}[word_types][]", type, false
-          = type
+          %label= type
 
         = link_to_function "Inverteer", "Search.invertTypes($(this).closest('td'))", :style => "margin-left: 2em;"
 
-    %tr
+    %tr.flag-filter
       %th Flag(s)
       %td
         = text_field_tag "#{@field_name}[flags]", @search[:flags]
         = select_tag "#{@field_name}[flags_type]", options_for_select({ "Bevat alle flags (AND)" => :AND, "Bevat één of meer van de flags (OR)" => :OR }, @search[:flags_type])
-    %tr
+    %tr.flag-filter
       %th Flag(s) uitsluiten
       %td
         = text_field_tag "#{@field_name}[exclude_flags]", @search[:exclude_flags]
         = select_tag "#{@field_name}[exclude_flags_type]", options_for_select({ "Bevat niet alle flags (AND)" => :AND, "Bevat geen van de flags (OR)" => :OR }, @search[:exclude_flags_type])
     %tr
-      %th Positie in zin
+      %th Inverteer
       %td
-        = select_tag "#{@field_name}[position_type]", options_for_select({ "" => "", "Eerste" => :first, "Laatste" => :last }, @search[:word_type])
+        = check_box_tag "#{@field_name}[invert_term]"
+        %label Inverteer deze term
     %tr
-      %th Negatief
-      %td
-        = check_box_tag "#{@field_name}[exclude_term]"
-        Term mag niet voorkomen
+      %th Aantal
+      %td.occurrence-type
+        = radio_button_tag "#{@field_name}[occurrence_type]", "once", params[:wildcard] == "false"
+        %label Één (highlight)
+
+        = radio_button_tag "#{@field_name}[occurrence_type]", "wildcard", params[:wildcard] == "true"
+        %label 0 of meer (wildcard)
+
+        = radio_button_tag "#{@field_name}[occurrence_type]", "range"
+        %label Range:
+
+        Minimaal
+        = text_field_tag "#{@field_name}[min_occurrences]", "", :size => 3, :class => "occurrence-range"
+
+        Maximaal:
+        = text_field_tag "#{@field_name}[max_occurrences]", "", :size => 3, :class => "occurrence-range"

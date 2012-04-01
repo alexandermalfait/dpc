@@ -1,6 +1,6 @@
 var Search = {
     init: function() {
-        this.addTerm()
+        this.addTerm(true)
 
         $('form#search').submit(function() {
             Search.search()
@@ -21,6 +21,37 @@ var Search = {
 
                 Search.setIndexes()
             }
+        })
+
+        $(".search-term input.filter-selection").live('click', function() {
+            var $relevantRow = $(this).closest('.search-term').find('tr.' + this.value + "-filter")
+
+            if(this.checked) {
+                $relevantRow.show()
+                $relevantRow.find('input[type=text]').first().focus()
+            }
+            else {
+                $relevantRow.hide()
+                $relevantRow.find('input[type=text]').val('')
+                $relevantRow.find('input[type=checkbox]').attr('checked','')
+            }
+        })
+
+        $(".search-term td.occurrence-type input[type=radio]").live('click', function() {
+            if(this.checked && this.value == "wildcard") {
+                $(this).closest('.search-term').addClass('wildcard-term')
+            }
+            else {
+                $(this).closest('.search-term').removeClass('wildcard-term')
+            }
+
+            if(this.checked && this.value != "range") {
+                $(this).siblings("input.occurrence-range").val('')
+            }
+        })
+
+        $(".search-term input.occurrence-range").live('change', function() {
+            $(this).siblings("input[value=range]").attr('checked','checked')
         })
     } ,
 
@@ -72,20 +103,33 @@ var Search = {
         }
     } ,
 
-    addTerm: function() {
+    addTerm: function(wildcard) {
         var index = 0
 
         if($('div.search-term').size() > 0) {
             index = parseInt($('div.search-term').last().find('input.index').val()) + 1
         }
 
-        $.get("/search/search_term", { index: index }, function(data) {
+        $.get("/search/search_term", { index: index, wildcard: wildcard }, function(data) {
             $('#search #terms').append(data)
 
             Search.setIndexes()
-        })
 
-        Search.toggleDistanceFields()
+            Search.autoLinkCheckboxLabels()
+        })
+    } ,
+
+    autoIdIndex: 0,
+
+    autoLinkCheckboxLabels: function() {
+        $('#search #terms input[type=checkbox], #search #terms input[type=radio]').each(function() {
+            if(!this.id) {
+                Search.autoIdIndex++
+                $(this).attr('id', "auto-id-" + Search.autoIdIndex)
+            }
+
+            $(this).next('label').attr('for', this.id)
+        })
     } ,
 
     removeTerm: function($term) {
