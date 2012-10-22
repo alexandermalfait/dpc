@@ -12,7 +12,7 @@
         %th Talen
         %td#active-languages
           - @languages.each do |name, count|
-            = check_box_tag "languages[]", name, name == "NL-BE" || name == "NL-NL", :id => "language-#{name}", "data-language-base" => name[0..1].downcase
+            = check_box_tag "languages[]", name, false, :id => "language-#{name}", "data-language-base" => name[0..1].downcase
             = label_tag "language-#{name}", name
             %small (#{count})
 
