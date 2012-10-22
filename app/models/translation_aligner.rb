@@ -1,10 +1,15 @@
 class TranslationAligner
 
-  def initialize(left_document, right_document, mapping_document, document_record)
+  attr_reader :sentences_imported
+
+  def initialize(left_document, right_document, mapping_document, document_record, right_to_left)
     @left_document = left_document
     @right_document = right_document
     @mapping_document = mapping_document
     @document_record = document_record
+    @right_to_left = right_to_left
+
+    @sentences_imported = 0
   end
 
   def align
@@ -21,28 +26,29 @@ class TranslationAligner
     puts right_sentences.inspect
 
     align_xml.at('linkGrp[@type="alignment"]').search("link").each do |link|
-      left_ids, right_ids = link['targets'].split("; ")
+      if @right_to_left
+        right_ids, left_ids = link['targets'].split("; ")
+      else
+        left_ids, right_ids = link['targets'].split("; ")
+      end
+
 
       left_ids.split(" ").each do |left_id|
         left_sentence = left_sentences[left_id]
 
         unless left_sentences[left_id]
-          puts "Couldn't find sentence #{left_id} in #{xml_filename("nl-tei")}!"
+          puts "Couldn't find sentence #{left_id} in #@left_document!"
           next
         end
 
         matching_right_sentences = right_ids.split(" ").collect do |right_id|
           unless right_sentences[right_id]
-            puts "Couldn't find sentence #{right_id.inspect} in #{@right_document}!"
+            puts "Couldn't find sentence #{right_id.inspect} in #@right_document!"
             next
           end
 
           right_sentences[right_id][:original]
         end.join(" ")
-
-        puts left_sentence[:original]
-        puts matching_right_sentences
-        puts ""
 
         left_sentence_record = @document_record.sentences.first(:conditions => {:position => left_sentence[:position]})
 
@@ -56,7 +62,15 @@ class TranslationAligner
           left_sentence_record.untranslated_2 = matching_right_sentences
         end
 
+        puts File.basename(@left_document) + " => " + File.basename(@right_document)
+        puts left_sentence_record.original
+        puts left_sentence_record.untranslated
+        puts left_sentence_record.untranslated_2
+        puts ""
+
         left_sentence_record.save!
+
+        @sentences_imported += 1
       end
     end
   end

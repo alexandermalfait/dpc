@@ -101,11 +101,14 @@ namespace :dpc do
   task :import_untranslated => :environment do
     Sentence.update_all("untranslated = '', untranslated_2 = ''")
 
+    reporter = SpeedReporter.new("sentences")
+    reporter.report_every = 1
+
     num_imported = 0
 
     metadata_pattern = /(.*)-([a-z]{2})-([a-z]{2})-tei\.xml/
 
-    Dir[File.join(RAILS_ROOT, "data/bmm*")].each do |folder|
+    Dir[File.join(RAILS_ROOT, "data/*")].each do |folder|
       if File.directory? folder
         Dir[File.join(folder, "*")].find_all { |file| file.match(metadata_pattern) }.each do |metadata_file|
           match = metadata_file.match(metadata_pattern)
@@ -114,24 +117,33 @@ namespace :dpc do
           left_language = match[2]
           right_language = match[3]
 
-          document_name = "#{File.basename(basename)}-#{left_language}"
-
           left_language_file = "#{basename}-#{left_language}-tei.xml"
           right_language_file = "#{basename}-#{right_language}-tei.xml"
 
           next unless File.size?(metadata_file) && File.size?(left_language_file) && File.size?(right_language_file) # zero bytes file?
 
-          document = Document.first(:conditions => {:filename => document_name})
 
-          raise "Could not find document for #{document_name}" unless document
+          left_document_name = "#{File.basename(basename)}-#{left_language}"
+          left_document = Document.first(:conditions => {:filename => left_document_name})
+          raise "Could not find document for #{left_document_name}" unless left_document
 
-          aligner = TranslationAligner.new(left_language_file, right_language_file, metadata_file, document)
+          right_document_name = "#{File.basename(basename)}-#{right_language}"
+          right_document = Document.first(:conditions => {:filename => right_document_name})
+          raise "Could not find document for #{right_document_name}" unless right_document
 
+          aligner = TranslationAligner.new(left_language_file, right_language_file, metadata_file, left_document, false)
           aligner.align
+
+          reporter.processed(aligner.sentences_imported)
+
+          aligner = TranslationAligner.new(right_language_file, left_language_file, metadata_file, right_document, true)
+          aligner.align
+
+          reporter.processed(aligner.sentences_imported)
 
           num_imported += 1
 
-          puts "Updated #{num_imported}: #{document.filename}"
+          puts "Updated #{num_imported}: #{left_document.filename}"
         end
       end
     end
