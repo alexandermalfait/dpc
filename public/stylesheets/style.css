@@ -213,3 +213,7 @@ span.word-analysis {
 .search-term tr.word-filter, .search-term tr.lemma-filter, .search-term tr.flag-filter, .search-term tr.type-filter {
     display: none;
 }
+
+.search-term table.word-types td {
+    white-space: nowrap;
+}

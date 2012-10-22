@@ -13,7 +13,7 @@ class ExcelExporter
     excel.write_row [
       "Benaming","Zoektermen","Zin", "Zin + POS", "File", "Titel", "Taal", "Auteur", "Uitgever", "Publicatie Datum", "Orig Publicatie Datum",
       "Text Type", "Subtype", "Domein", "Keyword", "Type instituut", "Doelpubliek", "Doel", "Brontaal", "Doeltaal", "Intermediate", "Soort Vertaling",
-      "N Woorden", "N Zinnen", "Context Voor", "Context Zin", "Context Na", "Origineel", "Origineel 2", "Relevantie"
+      "N Woorden", "N Zinnen", "Context Voor", "Context Zin", "Context Na", "Parallel", "Parallel 2", "Relevantie"
     ], :bold
 
     index = 0
@@ -29,11 +29,9 @@ class ExcelExporter
         WHERE id IN (" + sentences.collect { |it| it['document_id'] }.sort.uniq.join(',') + ")
       ").group_by { |it| it['id']}
 
-      words = Word.connection.execute("SELECT id, word, word_type, lemma, sentence_id FROM word WHERE sentence_id IN (" + sentences.collect { |it| it['id'] }.join(',') + ") ORDER BY sentence_id, position")
+      words = Word.connection.execute("SELECT id, word, word_type, lemma, analysis, sentence_id FROM word WHERE sentence_id IN (" + sentences.collect { |it| it['id'] }.join(',') + ") ORDER BY sentence_id, position")
 
       words_per_sentence = words.group_by { |it| it['sentence_id'] }
-
-      flags_per_word = WordFlag.connection.execute("SELECT word_id, flag FROM word_flag WHERE word_id IN (" + words.collect { |it| it['id'] }.join(',') + ") ORDER BY word_id, position").group_by { |it| it['word_id'] }
 
       sentences.each do |sentence|
         index += 1
@@ -57,9 +55,7 @@ class ExcelExporter
         row << sentence['original']
         
         row << words_for_sentence.collect do |word|
-          flags = ( flags_per_word[word['id']] || [] ).collect { |f| f['flag'] }.join(',')
-
-          "#{word['word']} #{word['word_type']}(#{flags};#{word['lemma']})"
+          "#{word['word']} #{word['word_type']}(#{word['analysis']};#{word['lemma']})"
         end.join(" ")
 
         row << document['filename']
@@ -142,7 +138,7 @@ class ExcelExporter
       map['Lemma'] = term_params[:lemma].downcase if term_params[:lemma].present?
 
       if term_params[:word_types]
-        map['Types'] = term_params[:word_types].join(',')
+        map['Types'] = term_params[:word_types].collect { |id| WordType.find(id).name }.join(',')
       end
 
       if term_params[:flags].present?

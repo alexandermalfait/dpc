@@ -24,11 +24,16 @@
     %tr.type-filter
       %th Type(s)
       %td
-        - Word.word_types.each do |type|
-          = check_box_tag "#{@field_name}[word_types][]", type, false
-          %label= type
+        - WordType.all(:order => :name).group_by(&:language).each do |language, word_types|
+          %table.word-types{ "data-language" => language }
+            - word_types.in_groups_of(13, false).each do |line|
+              %tr
+                - line.each do |type|
+                  %td
+                    = check_box_tag "#{@field_name}[word_types][]", type.id, false
+                    %label= type.name
 
-        = link_to_function "Inverteer", "Search.invertTypes($(this).closest('td'))", :style => "margin-left: 2em;"
+        = link_to_function "Inverteer", "Search.invertTypes($(this).closest('td'))", :style => "float: right;"
 
     %tr.flag-filter
       %th Flag(s)

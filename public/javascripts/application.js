@@ -13,6 +13,10 @@ var Search = {
             $('div.analysis').toggle()
         })
 
+        $('#active-languages input[type=checkbox]').click(function() {
+            Search.updateVisibleTypeFields()
+        })
+
         $('#terms').sortable({
             axis: "y",
 
@@ -116,6 +120,8 @@ var Search = {
             Search.setIndexes()
 
             Search.autoLinkCheckboxLabels()
+
+            Search.updateVisibleTypeFields()
         })
     } ,
 
@@ -147,6 +153,24 @@ var Search = {
     invertTypes: function($container) {
         $container.find('input[type=checkbox]').each(function() {
             this.checked = !this.checked
+        })
+    } ,
+
+    updateVisibleTypeFields: function() {
+        var languages = []
+
+        $('#active-languages input[type=checkbox]:checked').each(function() {
+            var language = $(this).attr('data-language-base')
+
+            if(languages.indexOf(language) == -1) {
+                languages.push(language)
+            }
+        })
+
+        $('table.word-types').hide()
+
+        $.each(languages, function() {
+            $('table.word-types[data-language=' + this + ']').show()
         })
     }
 

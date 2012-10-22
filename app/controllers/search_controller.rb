@@ -6,7 +6,7 @@ class SearchController < ApplicationController
   MAX_REGEX_HITS = 1000
 
   def index
-    
+    @languages = Document.counts_per_language
   end
 
   def search_term
@@ -28,7 +28,7 @@ class SearchController < ApplicationController
       end
     end
 
-    search = SearchController.convert_params_to_search params[:term].values
+    search = SearchController.convert_params_to_search params[:term].values, params[:languages]
 
     @search_result = SEARCH_SERVICE.run_search(search)
 
@@ -57,7 +57,7 @@ class SearchController < ApplicationController
   end
 
   def excel_export
-    search = SearchController.convert_params_to_search params[:term].values
+    search = SearchController.convert_params_to_search params[:term].values, params[:languages]
 
     search_result = SEARCH_SERVICE.run_search(search)
 
@@ -75,8 +75,10 @@ class SearchController < ApplicationController
     )
   end
 
-  def self.convert_params_to_search(terms)
+  def self.convert_params_to_search(terms, languages)
     search = Search.new
+
+    search.languages = languages
 
     terms.sort_by { |term| term[:index].to_i }.each do |term_params|
       term = SearchTerm.new
@@ -99,7 +101,7 @@ class SearchController < ApplicationController
       end
 
       if term_params[:word_types]
-        term.word_types = term_params[:word_types].to_java(:string) 
+        term.word_type_ids = term_params[:word_types].collect(&:to_i).to_java(:int)
       end
 
       case term_params[:occurrence_type]

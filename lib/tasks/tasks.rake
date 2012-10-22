@@ -3,16 +3,31 @@ namespace :dpc do
     num_imported = 0
 
     Document.transaction do
-      Document.delete_all
-      Sentence.delete_all
-      Word.delete_all
-      WordFlag.delete_all
+      %w(document sentence word word_flag flag word_type word_word).each do |table|
+        puts "Clearing #{table}"
 
-      Dir[File.join(RAILS_ROOT, "data/*")].each do |folder|
-        if File.directory? folder
-          Dir[File.join(folder, "*-nl-mtd.xml")].each do |metadata_file|
-            contents_file = metadata_file.sub("nl-mtd", 'nl-tei')
+        Word.connection.execute("TRUNCATE #{table}")
 
+        Word.connection.execute("SELECT setval('#{table}_id_seq', 1)")
+      end
+
+      Importer.drop_indexes
+
+      require "benchmark"
+
+      puts "Importing XML"
+
+      folders = Dir[File.join(RAILS_ROOT, "data/*")].find_all { |file| File.directory?(file) }
+
+      reporter = SpeedReporter.new("words")
+
+      folders.each do |folder|
+        Dir[File.join(folder, "*-mtd.xml")].each do |metadata_file|
+          #next if num_imported > 300
+
+          contents_file = metadata_file.sub("-mtd", '-tei')
+
+          unless File.size(metadata_file) == 0 || File.size(contents_file) == 0
             importer = Importer.new(metadata_file, contents_file)
 
             document = importer.execute
@@ -20,11 +35,38 @@ namespace :dpc do
             num_imported += 1
 
             puts "Imported #{num_imported}: #{metadata_file} / #{document.title}"
+
+            reporter.processed(importer.num_words_imported)
+          end
+        end
+      end
+
+      Importer.create_indexes
+    end
+  end
+
+  task :list_french_word_types => :environment do
+    analyses = []
+
+    Dir[File.join(RAILS_ROOT, "data/*")].each do |folder|
+      if File.directory? folder
+        puts "Checking folder #{folder}"
+
+        Dir[File.join(folder, "*-fr-tei.xml")].each do |contents_file|
+          puts "Reading #{contents_file}"
+
+          contents = Hpricot.XML(File.read(contents_file))
+
+          contents.search("w").each do |word|
+            analyses << word['ana'] unless analyses.include?(word['ana'])
           end
         end
       end
     end
+
+    puts analyses.sort.join("\n")
   end
+
 
   task :re_import_metadata => :environment do
     Document.transaction do
@@ -61,20 +103,29 @@ namespace :dpc do
 
     num_imported = 0
 
-    Dir[File.join(RAILS_ROOT, "data/*")].each do |folder|
+    metadata_pattern = /(.*)-([a-z]{2})-([a-z]{2})-tei\.xml/
+
+    Dir[File.join(RAILS_ROOT, "data/bmm*")].each do |folder|
       if File.directory? folder
-        Dir[File.join(folder, "*-nl-tei.xml")].each do |contents_file|
-          # next unless File.basename(contents_file) == "dpc-bmm-001071-nl-tei.xml"
+        Dir[File.join(folder, "*")].find_all { |file| file.match(metadata_pattern) }.each do |metadata_file|
+          match = metadata_file.match(metadata_pattern)
 
-          next unless File.size? contents_file # zero bytes file?
+          basename = match[1]
+          left_language = match[2]
+          right_language = match[3]
 
-          filename = File.basename(contents_file).sub(/-tei\.xml$/, "")
+          document_name = "#{File.basename(basename)}-#{left_language}"
 
-          document = Document.first(:conditions => {:filename => filename})
+          left_language_file = "#{basename}-#{left_language}-tei.xml"
+          right_language_file = "#{basename}-#{right_language}-tei.xml"
 
-          raise "Could not find document for #{filename}" unless document
+          next unless File.size?(metadata_file) && File.size?(left_language_file) && File.size?(right_language_file) # zero bytes file?
 
-          aligner = TranslationAligner.new(document, folder)
+          document = Document.first(:conditions => {:filename => document_name})
+
+          raise "Could not find document for #{document_name}" unless document
+
+          aligner = TranslationAligner.new(left_language_file, right_language_file, metadata_file, document)
 
           aligner.align
 

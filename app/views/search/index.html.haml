@@ -6,10 +6,16 @@
   = link_to_function image_tag(Icons.add) + " Wildcard toevoegen", "Search.addTerm(true)"
 
 %form#search
-  #terms
-
   #extra
     %table.form
+      %tr
+        %th Talen
+        %td#active-languages
+          - @languages.each do |name, count|
+            = check_box_tag "languages[]", name, name == "NL-BE" || name == "NL-NL", :id => "language-#{name}", "data-language-base" => name[0..1].downcase
+            = label_tag "language-#{name}", name
+            %small (#{count})
+
       %tr
         %th Context
         %td
@@ -22,6 +28,7 @@
         %td
           = text_field_tag :search_name, "", :class => "medium"
 
+  #terms
 
   %button(type="submit")
     = image_tag(Icons.search)

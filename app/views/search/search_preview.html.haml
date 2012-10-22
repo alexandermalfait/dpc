@@ -38,7 +38,7 @@
             = h word.word
             
           %span.word-analysis
-            #{h word.word_type}(#{h word.flags.join(',')};#{h word.lemma})
+            #{h word.word_type}(#{h word.analysis};#{h word.lemma})
 
       - if @context[:after][sentence]
         - @context[:after][sentence].each do |context_sentence|

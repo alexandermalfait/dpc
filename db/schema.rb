@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100710112219) do
+ActiveRecord::Schema.define(:version => 20121021140304) do
 
   create_table "document", :force => true do |t|
     t.string "filename"
@@ -51,21 +51,22 @@ ActiveRecord::Schema.define(:version => 20100710112219) do
     t.text    "untranslated_2"
   end
 
-  add_index "sentence", ["document_id"], :name => "index_sentence_on_document_id"
+  create_table "test", :id => false, :force => true do |t|
+    t.integer "id",   :limit => 10,  :null => false
+    t.string  "text", :limit => 100
+  end
 
   create_table "word", :force => true do |t|
     t.integer "sentence_id",                 :null => false
     t.integer "position",                    :null => false
     t.string  "word",         :limit => 200
     t.string  "lemma",        :limit => 200
-    t.string  "word_type",    :limit => 10
+    t.string  "word_type",    :limit => 30
     t.integer "lemma_id"
     t.integer "word_type_id"
     t.integer "word_id"
+    t.string  "analysis"
   end
-
-  add_index "word", ["sentence_id", "position"], :name => "idx_word_order", :unique => true
-  add_index "word", ["sentence_id"], :name => "index_word_on_sentence_id"
 
   create_table "word_flag", :force => true do |t|
     t.integer "word_id",                :null => false
@@ -77,7 +78,8 @@ ActiveRecord::Schema.define(:version => 20100710112219) do
   add_index "word_flag", ["word_id"], :name => "index_word_flag_on_word_id"
 
   create_table "word_type", :force => true do |t|
-    t.string "name", :limit => 10, :null => false
+    t.string "name",     :limit => 100, :null => false
+    t.string "language", :limit => 2
   end
 
   create_table "word_word", :force => true do |t|

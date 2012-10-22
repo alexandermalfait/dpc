@@ -9,6 +9,6 @@ include_class 'be.alex.dpc.SearchService'
 
 if ENV['BOOT_SEARCH_ENGINE']
   SEARCH_SERVICE = SearchService.new
-  SEARCH_SERVICE.read_data "data.txt"
   SEARCH_SERVICE.progress_file_location = File.join(Rails.root, "public/current_progress.txt")
+  SEARCH_SERVICE.data_location = "dumps"
 end
