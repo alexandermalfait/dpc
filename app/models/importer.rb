@@ -102,16 +102,20 @@ Importer
         analysis = analyze(w['ana'], language)
 
         word_text = w.inner_text
+        lemma = w['lemma']
 
         word_word_id = Word.connection.select_value "SELECT id FROM word_word WHERE word = '#{e word_text.downcase}'"
         word_word_id ||= Word.connection.select_value "INSERT INTO word_word (word) VALUES('#{e(word_text.downcase)}') RETURNING id"
+
+        lemma_id = Word.connection.select_value "SELECT id FROM lemma WHERE lemma = '#{e lemma.downcase}'"
+        lemma_id ||= Word.connection.select_value "INSERT INTO lemma (lemma) VALUES('#{e(lemma.downcase)}') RETURNING id"
 
         word_type = analysis[:type]
         word_type_ids_map[word_type] ||= Word.connection.select_value "INSERT INTO word_type (name, language) VALUES('#{e word_type}', '#{e language}') RETURNING id"
 
         word_id = Word.connection.select_value "
-          INSERT INTO word (sentence_id, position, word, word_id, lemma, word_type, word_type_id, analysis)
-          VALUES(#{sentence_id}, #{word_index}, '#{e(word_text)}', #{word_word_id}, '#{e(w['lemma'])}', '#{e word_type}', '#{word_type_ids_map[word_type]}', '#{e w['ana']}')
+          INSERT INTO word (sentence_id, position, word, word_id, lemma, lemma_id, word_type, word_type_id, analysis)
+          VALUES(#{sentence_id}, #{word_index}, '#{e(word_text)}', #{word_word_id}, '#{e(lemma)}', #{lemma_id}, '#{e word_type}', '#{word_type_ids_map[word_type]}', '#{e w['ana']}')
           RETURNING id
         "
         analysis[:flags].each_with_index do |flag, flag_index|

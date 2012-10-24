@@ -3,7 +3,7 @@ namespace :dpc do
     num_imported = 0
 
     Document.transaction do
-      %w(document sentence word word_flag flag word_type word_word).each do |table|
+      %w(document sentence word word_flag flag word_type word_word lemma).each do |table|
         puts "Clearing #{table}"
 
         Word.connection.execute("TRUNCATE #{table}")
