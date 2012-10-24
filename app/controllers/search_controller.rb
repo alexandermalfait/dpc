@@ -28,6 +28,10 @@ class SearchController < ApplicationController
       end
     end
 
+    unless params[:languages].present?
+      render :text => "<strong>Oeps, geen taal aangeduid</strong>" and return
+    end
+
     search = SearchController.convert_params_to_search params[:term].values, params[:languages]
 
     @search_result = SEARCH_SERVICE.run_search(search)

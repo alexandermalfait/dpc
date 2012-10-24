@@ -57,16 +57,18 @@ class TranslationAligner
         end
 
         if left_sentence_record.untranslated.blank?
-          left_sentence_record.untranslated = matching_right_sentences
+          left_sentence_record.update_attribute :untranslated, matching_right_sentences
         else
-          left_sentence_record.untranslated_2 = matching_right_sentences
+          left_sentence_record.update_attribute :untranslated_2, matching_right_sentences
         end
 
+=begin
         puts File.basename(@left_document) + " => " + File.basename(@right_document)
         puts left_sentence_record.original
         puts left_sentence_record.untranslated
         puts left_sentence_record.untranslated_2
         puts ""
+=end
 
         left_sentence_record.save!
 
