@@ -38,4 +38,6 @@
 
 #search-results.top-margin
 
-%iframe#download-frame(style="visibility: hidden")
+%form#download-form{ :target => "download_frame", :action => url_for(:action => :excel_export), :method => "post" }
+
+%iframe#download-frame(style="visibility: hidden" name="download_frame")

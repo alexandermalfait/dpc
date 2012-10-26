@@ -76,7 +76,7 @@ var Search = {
 
         this.startProgressPoll()
 
-        $("#search-results").load("/search/search_preview", $('form#search').serialize(), function() {
+        $("#search-results").load("/search/search_preview", $('form#search').serializeArray(), function() {
             Search.endProgressPoll()
         })
     } ,
@@ -147,7 +147,13 @@ var Search = {
     exportToExcel: function() {
         this.startProgressPoll()
 
-        $("#download-frame").attr('src',"/search/excel_export?" + $('form#search').serialize())
+        $('#download-form').empty()
+
+        $.each($('form#search').serializeArray(), function() {
+            $('#download-form').append($('<input type="hidden" />').attr('name', this.name).val(this.value))
+        })
+
+        $('#download-form').submit()
     } ,
 
     invertTypes: function($container) {
