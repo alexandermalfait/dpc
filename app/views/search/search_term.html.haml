@@ -7,7 +7,7 @@
     %tr
       %th Filters
       %td
-        - { "word" => "Woord", "lemma" => "Lemma", "type" => "Type(s)", "flag" => "Flag(s)" }.each do |filter_type, label|
+        - { "word" => "Woord", "lemma" => "Lemma", "type" => "Woordsoort(en)", "flag" => "Flag(s)" }.each do |filter_type, label|
           %input.filter-selection{ :type => "checkbox", :value => filter_type }
           %label= label
     %tr.word-filter
@@ -22,11 +22,11 @@
       %td
         = text_field_tag "#{@field_name}[lemma]", @search[:lemma], :size => 50
     %tr.type-filter
-      %th Type(s)
+      %th Woordsoort(en)
       %td
         - WordType.all(:order => :name).group_by(&:language).each do |language, word_types|
           %table.word-types{ "data-language" => language }
-            - word_types.in_groups_of(14, false).each do |line|
+            - word_types.in_groups_of(13, false).each do |line|
               %tr
                 - line.each do |type|
                   %td
