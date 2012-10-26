@@ -26,7 +26,7 @@
       %td
         - WordType.all(:order => :name).group_by(&:language).each do |language, word_types|
           %table.word-types{ "data-language" => language }
-            - word_types.in_groups_of(13, false).each do |line|
+            - word_types.in_groups_of(14, false).each do |line|
               %tr
                 - line.each do |type|
                   %td
