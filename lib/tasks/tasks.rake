@@ -67,6 +67,53 @@ namespace :dpc do
     puts analyses.sort.join("\n")
   end
 
+  task :detect_wrong_document_languages => :environment do
+    Dir[File.join(RAILS_ROOT, "data/*")].each do |folder|
+      if File.directory? folder
+        #puts "Checking folder #{folder}"
+
+        Dir[File.join(folder, "*-mtd.xml")].each do |metadata_file|
+          #puts "Reading #{metadata_file}"
+
+          metadata = Hpricot.XML(File.read(metadata_file))
+
+          expected_language = metadata_file.match(/([a-z]{2})-mtd\.xml/)[1]
+          actual_language = metadata.at("metaText")['lang']
+
+          unless actual_language.downcase.starts_with?(expected_language)
+            puts File.basename(metadata_file) + " => " + actual_language
+          end
+        end
+      end
+    end
+  end
+
+  task :list_translation_modes => :environment do
+    modes = {}
+
+    Dir[File.join(RAILS_ROOT, "data/*")].each do |folder|
+      if File.directory? folder
+        #puts "Checking folder #{folder}"
+
+        Dir[File.join(folder, "*-mtd.xml")].each do |metadata_file|
+          #puts "Reading #{metadata_file}"
+
+          metadata = Hpricot.XML(File.read(metadata_file))
+
+          translation_mode = metadata.at("metaTrans").at('Mode').inner_text
+
+          modes[translation_mode] ||= 0
+
+          modes[translation_mode] += 1
+        end
+      end
+    end
+
+    modes.each do |mode, num|
+      puts "#{mode}: #{num}"
+    end
+  end
+
 
   task :re_import_metadata => :environment do
     Document.transaction do
