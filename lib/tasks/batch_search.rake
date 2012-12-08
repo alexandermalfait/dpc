@@ -1,17 +1,188 @@
 namespace :dpc do
   namespace :batch_search do
     task :nouns => :environment do
-      words = %w(Table Management Website Partner Type Article Speaker Ceo Budget Manager Site Software Marketing Fax Job btw Usd e-mail nanobodies team ict bizz trend gsm computer web coach service displays follow-up goodwill chips led knowhow display stress feedback mix handiweb club link unit dreadlocks mail interview pc site websites nanobody partnership trainer ic's spin-off timing real indicator label interface r&d consultant director audit tools investment engineering buy-out marketer deal performers equity database cock consolidatiegoodwill mri start-up leasing gsm warrant buy-out holding sun coreoptics stroke branding operator server input masterplan sms controllers deadline catering indoor actuals charter meeting incentive target master return processing minifizz e-mail managing roots speech guidelines scooter royalty's benchmark retail songs governance privacy microcontroller venture wafers hole businessmodel goal rituals producer made buzz consumer)
+      words = "aanmoedigingspremie
+aanval
+adreskaartje
+adviseur
+afdeling
+afdrukken
+afgeleide toepassing
+afkomst
+africhten
+afstamming
+algemeen plan
+Amerikaanse dollar
+apparaat
+artiest
+artikel
+baan
+baantje
+bedrijfsleiding
+bedrijfsmodel
+beeldscherm
+begeleiden
+begeleider
+beginnend bedrjf
+begroting
+beheer
+belegging
+beloning
+beroerte
+besturingsprogramma
+bestuur
+bestuurder
+betoog
+betrekking
+bijeenkomst
+bijproduct
+binnen-
+bromfiets
+brommer
+combinatie
+comfort
+compromis
+computerprogramma
+consument
+controle
+controleren
+deelhebberschap
+detailhandel
+diagonaal lezen
+dienst na verkoop
+dienstverlening
+directeur
+divisie
+doel
+drijven
+eenheid
+elektronische post
+etiket
+exploiteren
+fenomeen
+gebruikersinterface
+geïntegreerde schakeling
+geluidsbox
+gereedschap
+geruchten
+gesprek
+groep
+halfgeleiderlampje
+helpen
+hoeveelheid
+houdstermaatschappij
+hulpmiddel
+huurkoop
+ijkpunt
+informatie- en communicatietechnologie
+internet
+investering
+invoer
+koppeling
+leiden
+leider
+levering
+lied
+liedje
+machtiging
+mail
+mailtje
+marketingman
+marktanalyse
+marktonderzoek
+marktverkenning
+medespeler
+mengeling
+mengsel
+merk
+mixtuur
+mobiele telefoon
+mobieltje
+nabehandeling
+natrekken
+nawerking
+net
+netwerk
+octrooi
+oefenen
+oefenmeester
+omzetdoelstelling
+ondervraging
+onderzoek
+onderzoek en ontwikkeling
+oorkonde
+oorsprong
+opbrengst
+opslag
+optisch lezen
+origine
+overeenkomst
+overname
+overnamepremie
+pagina
+partnerschap
+patent
+persoonlijke levenssfeer
+planning
+ploeg
+popsong
+preek
+president-directeur
+privaat vermogen
+privésfeer
+producent
+programmatuur
+reclamebord
+rede
+redement
+redevoering
+regisseur
+richtlijn
+samenwerkingsverband
+schakel
+scherm
+sms-bericht
+smsje
+sociëteit
+spanning
+starter
+stel
+technologie
+telefax
+telefoon
+tendens
+terugkoppeling
+tijdslimiet
+toepassingsprogramma
+toespraak
+toevoer
+toost
+transactie
+uitdraaien
+uitprinten
+ultimatum
+vakkennis
+vennoot
+verband
+verbinden
+vergadering
+vergelijken
+verifiëren
+verklaring
+vervolg
+verwijzing
+volmacht
+voorzitter
+vraaggesprek
+weblocatie
+webpagina
+webstek
+welwillendheid
+werkdruk
+winst
+wortels".split("\n").collect(&:strip)
 
-      searcher = BatchSearcher.new(words, ["NL-BE"], [31], "N")
-
-      searcher.execute
-    end
-
-    task :verbs => :environment do
-      words = %w(Linken Trainen Printen Coachen Checken Scannen Runnen)
-
-      searcher = BatchSearcher.new(words, ["NL-BE"], [32], "V")
+      searcher = BatchSearcher.new(words, ["NL-BE"], "batch_results/alternatieven_NL")
 
       searcher.execute
     end

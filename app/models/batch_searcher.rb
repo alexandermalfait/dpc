@@ -3,11 +3,10 @@ include_class 'be.alex.dpc.SearchTerm'
 
 class BatchSearcher
 
-  def initialize(words, languages, word_types, word_type_description)
+  def initialize(words, languages, output_folder)
     @words = words
     @languages = languages
-    @word_types = word_types
-    @word_type_description = word_type_description
+    @output_folder = output_folder
 
     @statistics = {}
   end
@@ -16,24 +15,16 @@ class BatchSearcher
     @words.each_with_index do |word, index|
       puts "Processing #{index} / #{@words.size}"
 
+=begin
       execute_search(
-          "#{word} - #@word_type_description - Term",
-          { :word => word, :occurrence_type => "once", :word_types => @word_types}
+          "#{word}",
+          { :word => word, :occurrence_type => "once"}
       )
+=end
 
       execute_search(
-          "#{word} - Term",
-          { :word => word, :occurrence_type => "once" }
-      )
-
-      execute_search(
-          "#{word} - #@word_type_description - Lemma",
-          { :lemma => word, :occurrence_type => "once", :word_types => @word_types}
-      )
-
-      execute_search(
-          "#{word} - Lemma",
-          { :lemma => word, :occurrence_type => "once" }
+          "#{word}",
+          { :lemma => word, :occurrence_type => "once"}
       )
     end
 
@@ -49,7 +40,7 @@ class BatchSearcher
       excel.write_row([ name, total ])
     end
 
-    File.open("batch_results/_totals.xls", "wb") do |f|
+    File.open("#@output_folder/_totals.xls", "wb") do |f|
       f.write(excel.excel_content)
     end
   end
@@ -76,7 +67,7 @@ class BatchSearcher
 
     exporter = ExcelExporter.new(search_result.sentence_ids, options)
 
-    File.open("batch_results/#{name}.xls", "wb") do |f|
+    File.open("#@output_folder/#{name}.xls", "wb") do |f|
       f.write(exporter.get_excel.excel_content)
     end
   end
