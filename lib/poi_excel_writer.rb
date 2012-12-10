@@ -28,6 +28,8 @@ class PoiExcelWriter
     @current_row = 0
   end
 
+
+
   def write_row(data, style = nil)
     raise "You need to create a worksheet first using create_sheet" unless @sheet
 

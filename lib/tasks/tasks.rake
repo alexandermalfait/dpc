@@ -238,6 +238,37 @@ namespace :dpc do
     end
   end
 
+  task :select_random_documents => :environment do
+    all_documents = Document.all(:conditions => { :language => "NL-BE" })
 
+    selected_documents = []
+
+    while selected_documents.size < 47
+      candidate = all_documents.sample
+
+      unless selected_documents.include?(candidate)
+        unless selected_documents.count { |selection| candidate.text_type == selection.text_type } >= 9
+          unless selected_documents.count { |selection| candidate.provider == selection.provider } >= 3
+            selected_documents << candidate
+
+            puts "Found document #{selected_documents.size}"
+          end
+        end
+      end
+    end
+
+    excel = PoiExcelWriter.new
+
+    excel.create_sheet "Documents"
+    excel.select_sheet "Documents"
+
+    excel.write_list_of_hashes(selected_documents.sort_by(&:filename).collect(&:attributes))
+
+    excel.auto_size_columns
+
+    File.open("batch_results/random_selection.xls", "wb") do |f|
+      f.write(excel.excel_content)
+    end
+  end
 
 end

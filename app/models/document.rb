@@ -10,4 +10,8 @@ class Document < ActiveRecord::Base
 
     languages
   end
+
+  def provider
+    filename.match(/dpc-(.*?)-/)[1]
+  end
 end
