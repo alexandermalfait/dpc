@@ -33,7 +33,14 @@ img{
     float: right;
 }
 
-#hosted-by-cat small {
+#developed-by-cat {
+    position: fixed;
+    bottom: .5em;
+    right: .5em;
+    text-align: right;
+}
+
+#developed-by-cat small {
     display: block;
 }
 
