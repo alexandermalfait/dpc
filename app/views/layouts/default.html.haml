@@ -5,7 +5,11 @@
     %title DPC Search
 
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js" 
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"
+
+    :javascript
+      var BASE_PATH = #{(ActionController::Base::relative_url_root || "").to_json}
+
     = javascript_include_tag "application.js"
 
     = stylesheet_link_tag "/stylesheets/style.css"

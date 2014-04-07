@@ -72,11 +72,11 @@ var Search = {
     } ,
 
     search: function() {
-        $("#search-results").html('<img src="/images/ajax-loader.gif" />')
+        $("#search-results").html('<img src="' + BASE_PATH + '/images/ajax-loader.gif" />')
 
         this.startProgressPoll()
 
-        $("#search-results").load("/search/search_preview", $('form#search').serializeArray(), function() {
+        $("#search-results").load(BASE_PATH + "/search/search_preview", $('form#search').serializeArray(), function() {
             Search.endProgressPoll()
         })
     } ,
@@ -98,7 +98,7 @@ var Search = {
     } ,
 
     pollProgress: function() {
-        $("#current-progress").load("/current_progress.txt?nocache=" + (new Date()).getTime())
+        $("#current-progress").load(BASE_PATH + "/current_progress.txt?nocache=" + (new Date()).getTime())
 
         document.title = "DPC: " + $("#current-progress").html()
 
@@ -114,7 +114,7 @@ var Search = {
             index = parseInt($('div.search-term').last().find('input.index').val()) + 1
         }
 
-        $.get("/search/search_term", { index: index, wildcard: wildcard }, function(data) {
+        $.get(BASE_PATH + "/search/search_term", { index: index, wildcard: wildcard }, function(data) {
             $('#search #terms').append(data)
 
             Search.setIndexes()
