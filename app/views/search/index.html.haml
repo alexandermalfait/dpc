@@ -48,7 +48,7 @@
   %li
     Deze interface werd ontwikkeld in opdracht van het COMURE-project, gefinancierd door het Hogeschool Gent Onderzoeksfonds (2010-2014)
   %li
-    Nieuwe gebruiker? Lees eerst #{link_to "onze handleiding", "files/DPC-Interface-Handleiding.pdf", :target => "_blank"}.
+    Nieuwe gebruiker? Lees eerst #{link_to "onze handleiding", (ActionController::Base::relative_url_root || "") + "/files/DPC-Interface-Handleiding.pdf", :target => "_blank"}.
   %li
     Voor meer informatie over de structuur en de inhoud van het Dutch Parallel Corpus, zie #{link_to "Macken et al 2011", "http://www.lt3.ugent.be/en/publications/dutch-parallel-corpus-a-balanced-copyright-cleared-parallel-/", :target => "_blank"}
   %li
