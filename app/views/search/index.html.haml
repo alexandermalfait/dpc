@@ -41,3 +41,16 @@
 %form#download-form{ :target => "download_frame", :action => url_for(:action => :excel_export), :method => "post" }
 
 %iframe#download-frame(style="visibility: hidden" name="download_frame")
+
+%br(clear="all")
+
+%ul#app-info
+  %li
+    Deze interface werd ontwikkeld in opdracht van het COMURE-project, gefinancierd door het Hogeschool Gent Onderzoeksfonds (2010-2014)
+  %li
+    Nieuwe gebruiker? Lees eerst #{link_to "onze handleiding", "files/DPC-Interface-Handleiding.pdf", :target => "_blank"}.
+  %li
+    Voor meer informatie over de structuur en de inhoud van het Dutch Parallel Corpus, zie #{link_to "Macken et al 2011", "http://www.lt3.ugent.be/en/publications/dutch-parallel-corpus-a-balanced-copyright-cleared-parallel-/", :target => "_blank"}
+  %li
+    Neem contact op met #{link_to "Peter Velaerts", "http://www.lt3.ugent.be/en/people/peter-velaerts/", :target => "_blank"} bij technische problemen met de interface.
+    We kunnen echter geen hulp bieden met het formuleren van uw zoekopdrachten. Raadpleeg hiervoor de handleiding.
